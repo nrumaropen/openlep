@@ -39,7 +39,7 @@ A structured relational database model that captures language needs, service del
 [→ View Component 1 Documentation](./component-1-data-schema/)
 
 ### Component 2 — AI-Assisted Compliance Monitoring Architecture
-A cloud-based system architecture featuring AI-powered analytics, automated compliance risk scoring, service gap detection, complaint pattern analysis, and predictive compliance alerts. Includes a dashboard prototype and operational workflow model.
+A cloud-based system architecture featuring AI-powered analytics, automated compliance risk scoring, service gap detection, complaint pattern analysis, and predictive compliance alerts. Includes a dashboard design mockup (built in Tableau) illustrating the intended user interface,  and an operational workflow model.
 
 [→ View Component 2 Documentation](./component-2-ai-architecture/)
 
