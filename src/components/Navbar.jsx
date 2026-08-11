@@ -7,13 +7,13 @@ function Navbar() {
         </a>
 
         <nav className="nav-links">
-          <a href="#problem">Problem</a>
-          <a href="#components">Components</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/docs">Documentation</a>
           <a href="#architecture">Architecture</a>
-          <a href="#documentation">Documentation</a>
         </nav>
 
-        <a href="#documentation" className="nav-button">
+        <a href="/docs" className="nav-button">
           Explore OpenLEP
         </a>
       </div>
