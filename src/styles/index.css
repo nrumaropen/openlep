@@ -3,7 +3,7 @@
 @import "./global/layout.css";
 
 @import "./components/navbar.css";
-@import "./components/hero.css";
+@import "./components/Hero.css";
 @import "./components/architecture.css";
 @import "./components/LanguageMap.css";
 @import "./components/problem.css";
