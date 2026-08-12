@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>OpenLEP</title>
+
+    <script>
+      const path = window.location.pathname;
+      const search = window.location.search;
+
+      const base = "/openlep/";
+
+      if (path.startsWith(base)) {
+        const route = path.slice(base.length);
+
+        window.location.replace(
+          base + "?redirect=" + encodeURIComponent(route + search)
+        );
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </head>
+
+  <body>
+    Redirecting to OpenLEP...
+  </body>
+</html>
+

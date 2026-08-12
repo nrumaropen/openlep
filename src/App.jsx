@@ -7,10 +7,9 @@ import Dashboard from "./dashboard/Dashboard";
 import Architecture from "./components/Architecture";
 
 function App() {
-  const path = window.location.pathname;
+  const hash = window.location.hash;
 
-  // Remove the GitHub Pages base path
-  const route = path.replace(/^\/openlep/, "") || "/";
+  const route = hash.replace(/^#/, "") || "/";
 
   if (route === "/about") {
     return <About />;

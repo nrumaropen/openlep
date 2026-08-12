@@ -9,13 +9,13 @@ function Navbar() {
 
         <nav className="nav-links">
           <a href="/openlep/">Home</a>
-          <a href="/openlep/about">About</a>
-          <a href="/openlep/docs">Documentation</a>
-          <a href="/openlep/dashboard">Dashboard</a>
-          <a href="/openlep/architecture">Architecture</a>
+          <a href="/openlep/#/about">About</a>
+          <a href="/openlep/#/docs">Documentation</a>
+          <a href="/openlep/#/dashboard">Dashboard</a>
+          <a href="/openlep/#/architecture">Architecture</a>
         </nav>
 
-        <a href="/openlep/dashboard" className="nav-button">
+        <a href="/openlep/#/dashboard" className="nav-button">
           Explore Dashboard
         </a>
       </div>
@@ -24,4 +24,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
