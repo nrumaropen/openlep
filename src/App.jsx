@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 import Home from "./pages/Home";
@@ -8,6 +7,33 @@ import Contact from "./pages/Contact";
 import Dashboard from "./dashboard/Dashboard";
 import Architecture from "./components/Architecture";
 
+function Navbar() {
+  return (
+    <header className="navbar">
+      <div className="nav-container">
+        <a href="/openlep/" className="logo">
+          OpenLEP
+        </a>
+
+        <nav className="nav-links">
+          <a href="/openlep/">Home</a>
+          <a href="/openlep/#/about">About</a>
+          <a href="/openlep/#/docs">Documentation</a>
+          <a href="/openlep/#/dashboard">Dashboard</a>
+          <a href="/openlep/#/architecture">Architecture</a>
+        </nav>
+
+        <a
+          href="/openlep/#/dashboard"
+          className="nav-button"
+        >
+          Explore Dashboard
+        </a>
+      </div>
+    </header>
+  );
+}
+
 function App() {
   const [route, setRoute] = useState(
     window.location.hash.replace(/^#/, "") || "/"
@@ -15,7 +41,9 @@ function App() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      setRoute(window.location.hash.replace(/^#/, "") || "/");
+      setRoute(
+        window.location.hash.replace(/^#/, "") || "/"
+      );
     };
 
     window.addEventListener("hashchange", handleHashChange);
@@ -25,27 +53,35 @@ function App() {
     };
   }, []);
 
-  if (route === "/about") {
-    return <About />;
-  }
+  const renderPage = () => {
+    switch (route) {
+      case "/about":
+        return <About />;
 
-  if (route === "/docs") {
-    return <Docs />;
-  }
+      case "/docs":
+        return <Docs />;
 
-  if (route === "/contact") {
-    return <Contact />;
-  }
+      case "/contact":
+        return <Contact />;
 
-  if (route === "/dashboard") {
-    return <Dashboard />;
-  }
+      case "/dashboard":
+        return <Dashboard />;
 
-  if (route === "/architecture") {
-    return <Architecture />;
-  }
+      case "/architecture":
+        return <Architecture />;
 
-  return <Home />;
+      default:
+        return <Home />;
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+
+      <main>{renderPage()}</main>
+    </>
+  );
 }
 
 export default App;

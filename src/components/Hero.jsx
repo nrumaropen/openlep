@@ -31,7 +31,7 @@ function Hero() {
           <div className="architecture-card">
             <div className="card-label">OPENLEP</div>
 
-            <div className="architecture-line"></div>
+            <div className="architecture-line" />
 
             <div className="architecture-node">
               <span>01</span>

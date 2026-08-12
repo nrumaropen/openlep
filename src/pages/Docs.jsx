@@ -1,11 +1,8 @@
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function Docs() {
   return (
     <>
-      <Navbar />
-
       <main className="inner-page">
         <section className="page-hero">
           <div className="section-container">

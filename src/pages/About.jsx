@@ -1,12 +1,8 @@
-
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function About() {
   return (
     <>
-      <Navbar />
-
       <main className="inner-page">
         {/* HERO */}
         <section className="page-hero">
@@ -268,9 +264,7 @@ function About() {
             <div className="highlight-box">
               <p className="eyebrow">OPEN PRINCIPLES</p>
 
-              <h2>
-                Transparent. Structured. Reusable.
-              </h2>
+              <h2>Transparent. Structured. Reusable.</h2>
 
               <p>
                 OpenLEP is designed around openly documented concepts,
