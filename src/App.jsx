@@ -1,4 +1,6 @@
 
+import { useState, useEffect } from "react";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Docs from "./pages/Docs";
@@ -7,9 +9,21 @@ import Dashboard from "./dashboard/Dashboard";
 import Architecture from "./components/Architecture";
 
 function App() {
-  const hash = window.location.hash;
+  const [route, setRoute] = useState(
+    window.location.hash.replace(/^#/, "") || "/"
+  );
 
-  const route = hash.replace(/^#/, "") || "/";
+  useEffect(() => {
+    const handleHashChange = () => {
+      setRoute(window.location.hash.replace(/^#/, "") || "/");
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   if (route === "/about") {
     return <About />;
