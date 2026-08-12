@@ -1,0 +1,15 @@
+@import "./global/variables.css";
+@import "./global/reset.css";
+@import "./global/layout.css";
+
+@import "./components/navbar.css";
+@import "./components/hero.css";
+@import "./components/architecture.css";
+@import "./components/LanguageMap.css";
+@import "./components/problem.css";
+@import "./components/footer.css";
+
+@import "../styles/pages/about.css";
+@import "../styles/pages/docs.css";
+@import "../styles/pages/contact.css";
+@import "../styles/pages/dashboard.css";

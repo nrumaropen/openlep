@@ -23,8 +23,8 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 OpenLEP</p>
-          <p>Open-source framework</p>
+          <p>© 2026 OpenLEP | nisarpn | All Right Reseved</p>
+          <p>Open-source framework | speak to everyone </p>
         </div>
       </div>
     </footer>

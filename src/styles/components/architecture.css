@@ -1,0 +1,114 @@
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.architecture-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 390px;
+
+  padding: 32px;
+
+  border-radius: 8px;
+
+  background: var(--surface-dark);
+  color: white;
+
+  box-shadow:
+    0 30px 70px rgba(20, 32, 25, 0.14),
+    0 5px 15px rgba(20, 32, 25, 0.06);
+}
+
+.card-label {
+  margin-bottom: 25px;
+
+  color: #9eaaa2;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.architecture-line {
+  position: absolute;
+  left: 50px;
+  top: 75px;
+
+  width: 1px;
+  height: 225px;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.architecture-node {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 65px;
+  margin-bottom: 10px;
+
+  gap: 18px;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.architecture-node:last-child {
+  margin-bottom: 0;
+}
+
+.architecture-node span {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: var(--surface-dark);
+  color: #a9c4ae;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .hero-visual {
+    justify-content: flex-start;
+  }
+
+  .architecture-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .architecture-card {
+    padding: 28px;
+  }
+
+  .architecture-line {
+    left: 46px;
+    top: 70px;
+  }
+
+  .architecture-node {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .architecture-node span {
+    width: 36px;
+    height: 36px;
+  }
+}

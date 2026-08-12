@@ -1,0 +1,106 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  background: rgba(245, 246, 242, 0.94);
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav-container {
+  width: min(1280px, calc(100% - 64px));
+  min-height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+/* =========================================================
+   OPENLEP LOGO
+========================================================= */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo-image {
+  display: block;
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.logo:hover .logo-image {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  margin-left: auto;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #354038;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 18px;
+
+  border: 1px solid var(--text);
+  border-radius: 5px;
+
+  background: var(--text);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}

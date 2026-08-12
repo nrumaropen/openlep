@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@svg-maps/usa": "^2.0.0",
+    "@vnedyalk0v/react19-simple-maps": "^2.0.10",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

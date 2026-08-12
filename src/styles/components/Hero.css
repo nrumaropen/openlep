@@ -1,0 +1,899 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  width: 100%;
+
+  padding: 105px 0 90px;
+
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(57, 113, 76, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #fbfcfa 0%,
+      #f3f7f4 100%
+    );
+}
+
+.hero-container {
+  width: min(
+    1180px,
+    calc(100% - 64px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP ROW
+========================================================= */
+
+.hero-top {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(330px, 0.65fr);
+
+  align-items: center;
+
+  gap: 90px;
+
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 18px;
+
+  color: #39714c;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+
+  color: #18221c;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: clamp(
+    52px,
+    6vw,
+    78px
+  );
+
+  font-weight: 600;
+
+  line-height: 0.97;
+
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  color: #39714c;
+}
+
+.hero-description {
+  max-width: 580px;
+
+  margin: 26px 0 0;
+
+  color: #66736a;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  gap: 11px;
+
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 19px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary-button {
+  gap: 9px;
+
+  border: 1px solid #39714c;
+
+  background: #39714c;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px
+    rgba(57, 113, 76, 0.17);
+}
+
+.primary-button:hover {
+  background: #2d603e;
+
+  transform: translateY(-2px);
+}
+
+.button-arrow {
+  font-size: 13px;
+}
+
+.secondary-button {
+  border: 1px solid #ccd8cf;
+
+  background: #ffffff;
+
+  color: #39714c;
+}
+
+.secondary-button:hover {
+  border-color: #8cab95;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FRAMEWORK HEADER
+========================================================= */
+
+.framework-header {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  align-items: center;
+
+  column-gap: 15px;
+
+  min-height: 105px;
+
+  padding: 25px;
+
+  border: 1px solid #d6e2d8;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f1f7f3
+    );
+
+  box-shadow:
+    0 18px 40px
+    rgba(36, 62, 44, 0.07);
+}
+
+.framework-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #39714c;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.framework-title span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #72907b;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.framework-title h2 {
+  margin: 0;
+
+  color: #1b2920;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: 27px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.035em;
+}
+
+.framework-line {
+  position: absolute;
+
+  left: 46px;
+  bottom: -61px;
+
+  width: 1px;
+  height: 60px;
+
+  background: #b7cdbb;
+}
+
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+
+.language-map-section {
+  width: 100%;
+
+  padding-top: 35px;
+}
+
+.language-map-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 17px;
+}
+
+.language-map-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #39714c;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.language-map-heading h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #1a2920;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: clamp(
+    27px,
+    3vw,
+    38px
+  );
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.language-map-legend {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding-bottom: 4px;
+
+  color: #728077;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.legend-colors {
+  display: flex;
+
+  gap: 3px;
+}
+
+.legend-color {
+  display: block;
+
+  width: 17px;
+  height: 6px;
+
+  border-radius: 2px;
+}
+
+.legend-color.level-1 {
+  background: #e5eee7;
+}
+
+.legend-color.level-2 {
+  background: #c9dccd;
+}
+
+.legend-color.level-3 {
+  background: #a5c0aa;
+}
+
+.legend-color.level-4 {
+  background: #719b7c;
+}
+
+.legend-color.level-5 {
+  background: #39714c;
+}
+
+
+/* =========================================================
+   MAP CARD
+========================================================= */
+
+.language-map-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 480px;
+
+  overflow: hidden;
+
+  padding: 20px 35px;
+
+  border: 1px solid #dce7df;
+
+  border-radius: 13px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #ffffff 0%,
+      #f2f7f3 72%,
+      #edf4ef 100%
+    );
+
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 18px 45px
+    rgba(35, 62, 44, 0.06);
+}
+
+
+/* =========================================================
+   MAP SVG
+========================================================= */
+
+.map-visual {
+  width: 100%;
+  height: 100%;
+}
+
+.usa-map {
+  display: block;
+
+  width: 100%;
+
+  max-width: 1050px;
+
+  height: auto;
+
+  margin: 0 auto;
+}
+
+.map-state {
+  stroke: #ffffff;
+
+  stroke-width: 1.5;
+
+  stroke-linejoin: round;
+
+  stroke-linecap: round;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    filter 0.2s ease;
+}
+
+.map-state:hover {
+  opacity: 0.82;
+
+  filter:
+    drop-shadow(
+      0 3px 5px
+      rgba(57, 113, 76, 0.18)
+    );
+}
+
+.map-state.level-1 {
+  fill: #e5eee7;
+}
+
+.map-state.level-2 {
+  fill: #c9dccd;
+}
+
+.map-state.level-3 {
+  fill: #a5c0aa;
+}
+
+.map-state.level-4 {
+  fill: #719b7c;
+}
+
+.map-state.level-5 {
+  fill: #39714c;
+}
+
+
+/* =========================================================
+   MAP FOOTER
+========================================================= */
+
+.language-map-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 12px;
+
+  color: #77847b;
+
+  font-size: 9px;
+}
+
+.language-map-footer span:last-child {
+  color: #39714c;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   THREE COMPONENTS
+========================================================= */
+
+.architecture-components {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    70px
+    1fr
+    70px
+    1fr;
+
+  align-items: center;
+
+  margin-top: 55px;
+
+  padding-bottom: 10px;
+}
+
+
+/* =========================================================
+   COMPONENT
+========================================================= */
+
+.architecture-component {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 75px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #d7e3da;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px
+    rgba(36, 60, 44, 0.045);
+}
+
+.component-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #c5d8ca;
+
+  border-radius: 50%;
+
+  background: #edf5ef;
+
+  color: #39714c;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.component-content span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #779080;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+}
+
+.component-content strong {
+  color: #243229;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.component-connector {
+  position: relative;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b7cdbb,
+      #719b7c,
+      #b7cdbb
+    );
+}
+
+.component-connector span {
+  position: absolute;
+
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  border-top: 1px solid #719b7c;
+  border-right: 1px solid #719b7c;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+}
+
+.component-connector:first-of-type span,
+.component-connector:nth-of-type(2) span {
+  right: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    padding: 85px 0 75px;
+  }
+
+  .hero-top {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .framework-header {
+    max-width: 600px;
+  }
+
+  .framework-line {
+    display: none;
+  }
+
+  .language-map-card {
+    min-height: 400px;
+
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-container {
+    width: calc(100% - 32px);
+  }
+
+  .hero-top {
+    padding-bottom: 35px;
+
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        45px,
+        13vw,
+        62px
+      );
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .framework-header {
+    min-height: 85px;
+
+    padding: 18px;
+  }
+
+  .framework-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .framework-title h2 {
+    font-size: 22px;
+  }
+
+  .language-map-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .language-map-heading h2 {
+    font-size: 29px;
+  }
+
+  .language-map-card {
+    min-height: 300px;
+
+    padding: 10px 5px;
+  }
+
+  .usa-map {
+    width: 115%;
+
+    max-width: none;
+
+    margin-left: -7.5%;
+  }
+
+  .language-map-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+  .architecture-components {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    margin-top: 35px;
+  }
+
+  .architecture-component {
+    min-height: 65px;
+  }
+
+  .component-connector {
+    width: 1px;
+
+    height: 25px;
+
+    margin-left: 18px;
+
+    background:
+      linear-gradient(
+        180deg,
+        #b7cdbb,
+        #719b7c
+      );
+  }
+
+  .component-connector span {
+    display: none;
+  }
+}
+
+ /* =========================================================
+    HERO STATEMENT
+ ========================================================= */
+
+.hero-statement {
+  margin-top: 90px;
+
+  padding: 80px 40px 35px;
+
+  border-top: 1px solid #cbd8ce;
+
+  text-align: center;
+}
+
+.hero-statement p {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  color: #18221c;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: clamp(
+    32px,
+    4.5vw,
+    58px
+  );
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.045em;
+}
+
+.hero-statement span {
+  color: #39714c;
+}
+
+.hero-statement em {
+  color: #66736a;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   HERO STATEMENT — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .hero-statement {
+    margin-top: 55px;
+
+    padding: 55px 10px 15px;
+  }
+
+  .hero-statement p {
+    font-size: clamp(
+      30px,
+      9vw,
+      42px
+    );
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+  }
+
+}

@@ -15,6 +15,7 @@ function Components() {
         </div>
 
         <div className="components-grid">
+          {/* LANGUAGE ACCESS STANDARDS */}
           <div className="framework-card">
             <div className="framework-icon">01</div>
 
@@ -25,9 +26,12 @@ function Components() {
               terminology, policies, and implementation standards.
             </p>
 
-            <a href="#documentation">Learn more →</a>
+            <a href="/openlep/#/language-access-standards">
+              Learn more →
+            </a>
           </div>
 
+          {/* COMPLIANCE INFRASTRUCTURE */}
           <div className="framework-card">
             <div className="framework-icon">02</div>
 
@@ -38,9 +42,12 @@ function Components() {
               access requirements with operational and compliance workflows.
             </p>
 
-            <a href="#documentation">Learn more →</a>
+            <a href="/openlep/#/compliance-infrastructure">
+              Learn more →
+            </a>
           </div>
 
+          {/* DATA & EVALUATION */}
           <div className="framework-card">
             <div className="framework-icon">03</div>
 
@@ -51,7 +58,9 @@ function Components() {
               implementation, and supporting evidence-based evaluation.
             </p>
 
-            <a href="#documentation">Learn more →</a>
+            <a href="/openlep/#/data-evaluation">
+              Learn more →
+            </a>
           </div>
         </div>
       </div>

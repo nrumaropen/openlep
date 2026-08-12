@@ -273,6 +273,11 @@ License information will be added as the project reaches the appropriate stage o
 
 ---
 
+## Viewing the Dashboard
+
+To view the dashboard, go to Actions in the GitHub repository and select the latest Deploy workflow. Once the deployment completes, open the deployed dashboard from the workflow.
+
+---
 ## Disclaimer
 
 OpenLEP is a developing framework and research/technical project. It does not itself constitute legal advice or establish an organization's legal compliance.

@@ -1,10 +1,8 @@
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Architecture() {
   return (
     <>
-      <Navbar />
 
       <main className="inner-page">
         <section className="page-hero">

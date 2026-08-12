@@ -1,0 +1,76 @@
+.problem-section {
+  background: white;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.problem-card {
+  min-height: 290px;
+
+  padding: 32px;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: var(--background);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 50px rgba(23, 33, 27, 0.08);
+}
+
+.card-number {
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.problem-card h3 {
+  margin: 65px 0 14px;
+
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.problem-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-card {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  .problem-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .problem-card h3 {
+    margin-top: 45px;
+  }
+}

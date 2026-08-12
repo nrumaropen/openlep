@@ -1,0 +1,165 @@
+.docs-content {
+  background: var(--background);
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.docs-card {
+  min-height: 280px;
+
+  padding: 35px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: white;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.docs-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 50px rgba(23, 33, 27, 0.07);
+}
+
+.docs-card span,
+.contact-card span {
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.docs-card h2 {
+  margin: 55px 0 12px;
+
+  font-size: 24px;
+}
+
+.docs-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.docs-detail {
+  background: white;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 100px;
+}
+
+.detail-grid > div:last-child p {
+  margin: 0 0 25px;
+
+  color: var(--muted);
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.docs-schema {
+  background: var(--background);
+}
+
+.schema-header {
+  margin-bottom: 50px;
+}
+
+.schema-header h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(40px, 5vw, 58px);
+
+  letter-spacing: -0.04em;
+}
+
+.code-window {
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #101713;
+
+  box-shadow: 0 30px 70px rgba(16, 23, 19, 0.12);
+}
+
+.code-header {
+  padding: 15px 22px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #8f9992;
+
+  font-size: 12px;
+}
+
+.code-window pre {
+  margin: 0;
+
+  padding: 35px;
+
+  overflow-x: auto;
+
+  color: #d8e2db;
+
+  font-family: Consolas, "Courier New", monospace;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1000px) {
+  .detail-grid {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-card {
+    min-height: auto;
+
+    padding: 28px;
+  }
+
+  .docs-card h2 {
+    margin-top: 40px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .schema-header {
+    margin-bottom: 35px;
+  }
+
+  .code-window pre {
+    padding: 24px;
+
+    font-size: 12px;
+  }
+}
