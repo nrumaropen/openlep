@@ -1,6 +1,4 @@
 
-import { useState } from "react";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Docs from "./pages/Docs";
@@ -9,25 +7,28 @@ import Dashboard from "./dashboard/Dashboard";
 import Architecture from "./components/Architecture";
 
 function App() {
-  const [path] = useState(window.location.pathname);
+  const path = window.location.pathname;
 
-  if (path === "/openlep/about") {
+  // Remove the GitHub Pages base path
+  const route = path.replace(/^\/openlep/, "") || "/";
+
+  if (route === "/about") {
     return <About />;
   }
 
-  if (path === "/openlep/docs") {
+  if (route === "/docs") {
     return <Docs />;
   }
 
-  if (path === "/openlep/contact") {
+  if (route === "/contact") {
     return <Contact />;
   }
 
-  if (path === "/openlep/dashboard") {
+  if (route === "/dashboard") {
     return <Dashboard />;
   }
 
-  if (path === "/openlep/architecture") {
+  if (route === "/architecture") {
     return <Architecture />;
   }
 
