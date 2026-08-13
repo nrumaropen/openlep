@@ -1,37 +1,60 @@
 /* =========================================================
-   HERO
+   OPENLEP HERO / LANDING PAGE
 ========================================================= */
 
 .hero {
   width: 100%;
-
-  padding: 105px 0 90px;
+  padding: 105px 0 0;
 
   background:
     radial-gradient(
-      circle at 80% 10%,
+      circle at 82% 8%,
       rgba(57, 113, 76, 0.08),
-      transparent 32%
+      transparent 30%
     ),
     linear-gradient(
       180deg,
       #fbfcfa 0%,
       #f3f7f4 100%
     );
+
+  color: #18221c;
 }
 
 .hero-container {
-  width: min(
-    1180px,
-    calc(100% - 64px)
-  );
-
+  width: min(1180px, calc(100% - 64px));
   margin: 0 auto;
 }
 
 
 /* =========================================================
-   TOP ROW
+   SHARED TYPOGRAPHY
+========================================================= */
+
+.section-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #39714c;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  font-family:
+    var(--font-display, Georgia, serif);
+}
+
+
+/* =========================================================
+   HERO TOP
 ========================================================= */
 
 .hero-top {
@@ -39,13 +62,13 @@
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(330px, 0.65fr);
+    minmax(330px, 0.62fr);
 
   align-items: center;
 
   gap: 90px;
 
-  padding-bottom: 60px;
+  padding-bottom: 90px;
 }
 
 
@@ -54,7 +77,7 @@
 ========================================================= */
 
 .hero-content {
-  max-width: 650px;
+  max-width: 680px;
 }
 
 .hero-eyebrow {
@@ -75,14 +98,7 @@
 
   color: #18221c;
 
-  font-family:
-    var(--font-display, Georgia, serif);
-
-  font-size: clamp(
-    52px,
-    6vw,
-    78px
-  );
+  font-size: clamp(52px, 6vw, 78px);
 
   font-weight: 600;
 
@@ -98,7 +114,7 @@
 .hero-description {
   max-width: 580px;
 
-  margin: 26px 0 0;
+  margin: 27px 0 0;
 
   color: #66736a;
 
@@ -134,7 +150,6 @@
   border-radius: 6px;
 
   font-size: 10px;
-
   font-weight: 800;
 
   text-decoration: none;
@@ -142,7 +157,8 @@
   transition:
     transform 0.2s ease,
     background 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .primary-button {
@@ -163,10 +179,10 @@
   background: #2d603e;
 
   transform: translateY(-2px);
-}
 
-.button-arrow {
-  font-size: 13px;
+  box-shadow:
+    0 12px 25px
+    rgba(57, 113, 76, 0.22);
 }
 
 .secondary-button {
@@ -183,6 +199,10 @@
   transform: translateY(-2px);
 }
 
+.button-arrow {
+  font-size: 13px;
+}
+
 
 /* =========================================================
    FRAMEWORK HEADER
@@ -197,7 +217,7 @@
 
   align-items: center;
 
-  column-gap: 15px;
+  gap: 15px;
 
   min-height: 105px;
 
@@ -220,11 +240,6 @@
 }
 
 .framework-number {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
   width: 42px;
   height: 42px;
 
@@ -232,11 +247,8 @@
 
   background: #39714c;
 
-  color: #ffffff;
-
-  font-size: 10px;
-
-  font-weight: 800;
+  box-shadow:
+    0 0 0 7px rgba(57, 113, 76, 0.08);
 }
 
 .framework-title span {
@@ -247,7 +259,6 @@
   color: #72907b;
 
   font-size: 8px;
-
   font-weight: 800;
 
   letter-spacing: 0.15em;
@@ -258,11 +269,7 @@
 
   color: #1b2920;
 
-  font-family:
-    var(--font-display, Georgia, serif);
-
   font-size: 27px;
-
   font-weight: 600;
 
   letter-spacing: -0.035em;
@@ -282,125 +289,51 @@
 
 
 /* =========================================================
-   MAP SECTION
+   LANGUAGE LANDSCAPE
 ========================================================= */
 
-.language-map-section {
-  width: 100%;
-
-  padding-top: 35px;
+.language-landscape {
+  padding: 70px 0 0;
 }
 
-.language-map-header {
+.language-landscape .section-label {
+  font-size: 20px 
+}
+
+.landscape-intro {
   display: flex;
 
   align-items: flex-end;
-
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 50px;
 
-  margin-bottom: 17px;
+  margin-bottom: 25px;
 }
 
-.language-map-label {
-  display: block;
-
-  margin-bottom: 7px;
-
-  color: #39714c;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.16em;
-}
-
-.language-map-heading h2 {
-  max-width: 650px;
+.landscape-intro h2 {
+  max-width: 760px;
 
   margin: 0;
 
-  color: #1a2920;
+  color: #18221c;
 
-  font-family:
-    var(--font-display, Georgia, serif);
+  font-size: clamp(40px, 5vw, 66px);
 
-  font-size: clamp(
-    27px,
-    3vw,
-    38px
-  );
+  font-weight: 500;
 
-  font-weight: 600;
+  line-height: 0.95;
 
-  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
 
-  letter-spacing: -0.04em;
+.landscape-intro h2 span {
+  color: #39714c;
 }
 
 
 /* =========================================================
-   LEGEND
-========================================================= */
-
-.language-map-legend {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding-bottom: 4px;
-
-  color: #728077;
-
-  font-size: 8px;
-
-  font-weight: 800;
-
-  white-space: nowrap;
-}
-
-.legend-colors {
-  display: flex;
-
-  gap: 3px;
-}
-
-.legend-color {
-  display: block;
-
-  width: 17px;
-  height: 6px;
-
-  border-radius: 2px;
-}
-
-.legend-color.level-1 {
-  background: #e5eee7;
-}
-
-.legend-color.level-2 {
-  background: #c9dccd;
-}
-
-.legend-color.level-3 {
-  background: #a5c0aa;
-}
-
-.legend-color.level-4 {
-  background: #719b7c;
-}
-
-.legend-color.level-5 {
-  background: #39714c;
-}
-
-
-/* =========================================================
-   MAP CARD
+   LANGUAGE MAP
 ========================================================= */
 
 .language-map-card {
@@ -432,11 +365,6 @@
     rgba(35, 62, 44, 0.06);
 }
 
-
-/* =========================================================
-   MAP SVG
-========================================================= */
-
 .map-visual {
   width: 100%;
   height: 100%;
@@ -446,7 +374,6 @@
   display: block;
 
   width: 100%;
-
   max-width: 1050px;
 
   height: auto;
@@ -456,11 +383,9 @@
 
 .map-state {
   stroke: #ffffff;
-
   stroke-width: 1.5;
 
   stroke-linejoin: round;
-
   stroke-linecap: round;
 
   cursor: pointer;
@@ -502,35 +427,511 @@
 
 
 /* =========================================================
-   MAP FOOTER
+   LANDSCAPE CAPTION
 ========================================================= */
 
-.language-map-footer {
-  display: flex;
+.landscape-caption {
+  display: grid;
 
-  align-items: center;
+  grid-template-columns: 180px 1fr;
 
-  justify-content: space-between;
+  gap: 35px;
 
-  margin-top: 12px;
+  padding: 18px 0 0;
 
-  color: #77847b;
+  border-top: 1px solid #cbd8ce;
 
-  font-size: 9px;
+  margin-top: 14px;
 }
 
-.language-map-footer span:last-child {
-  color: #39714c;
+.landscape-caption > span {
+  color: #72907b;
 
-  font-weight: 600;
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.landscape-caption p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #66736a;
+
+  font-size: 13px;
+
+  line-height: 1.65;
 }
 
 
 /* =========================================================
-   THREE COMPONENTS
+   PROBLEM SECTION
 ========================================================= */
 
-.architecture-components {
+.problem-section {
+  margin-top: 140px;
+
+  padding: 90px 70px 80px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1d2b22 0%,
+      #142018 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 25px 60px
+    rgba(30, 52, 38, 0.12);
+}
+
+.problem-heading {
+  max-width: 850px;
+
+  margin-bottom: 75px;
+}
+
+.problem-heading .section-label{
+  font-size: 20px;
+}
+
+.problem-heading h2 {
+  margin: 0;
+
+  color: darkgray;
+
+  font-size: clamp(45px, 5.8vw, 76px);
+
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+}
+
+.problem-heading h2 span {
+  color: #86b991;
+}
+
+.problem-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1fr);
+
+  gap: 90px;
+
+  padding-top: 35px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.problem-lead {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: darkgrey;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: 27px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+.problem-content > div {
+  max-width: 500px;
+}
+
+.problem-content p:not(.problem-lead) {
+  max-width: 520px;
+
+  margin: 0 0 20px;
+
+  color: #aebbb1;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HUMAN IMPACT
+========================================================= */
+
+.impact-section {
+  padding: 140px 0 20px;
+}
+
+.impact-header {
+  max-width: 850px;
+
+  margin-bottom: 70px;
+}
+
+.impact-header .section-label{
+  font-size: 20px;
+}
+
+
+.impact-header h2 {
+  margin: 0;
+
+  color: #18221c;
+
+  font-size: clamp(45px, 5.5vw, 74px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+.impact-header h2 span {
+  color: #39714c;
+}
+
+.impact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top: 1px solid #cbd8ce;
+  border-bottom: 1px solid #cbd8ce;
+}
+
+.impact-card {
+  min-height: 260px;
+
+  padding: 28px 30px 35px;
+
+  border-right: 1px solid #cbd8ce;
+}
+
+.impact-card:first-child {
+  padding-left: 0;
+}
+
+.impact-card:last-child {
+  border-right: none;
+}
+
+.impact-number {
+  color: #39714c;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.impact-card h3 {
+  margin: 75px 0 13px;
+
+  color: #243229;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.impact-card p {
+  max-width: 290px;
+
+  margin: 0;
+
+  color: #66736a;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   INFRASTRUCTURE GAP
+========================================================= */
+
+.infrastructure-gap {
+  padding: 150px 0 130px;
+}
+
+.gap-heading {
+  max-width: 850px;
+
+  margin-bottom: 80px;
+}
+
+.gap-heading .section-label{
+font-size: 20px;
+}
+
+.gap-heading h2 {
+  margin: 0;
+
+  color: #18221c;
+
+  font-size: clamp(48px, 6vw, 84px);
+
+  font-weight: 500;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.06em;
+}
+
+.gap-heading h2 span {
+  color: #39714c;
+}
+
+.gap-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.75fr)
+    minmax(0, 1.25fr);
+
+  gap: 90px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid #cbd8ce;
+}
+
+.gap-content > p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #66736a;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.gap-questions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  border-top: 1px solid #d7e2da;
+  border-left: 1px solid #d7e2da;
+}
+
+.gap-questions > div {
+  min-height: 125px;
+
+  padding: 20px;
+
+  border-right: 1px solid #d7e2da;
+  border-bottom: 1px solid #d7e2da;
+}
+
+.gap-questions span {
+  display: block;
+
+  margin-bottom: 32px;
+
+  color: #72907b;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.gap-questions strong {
+  display: block;
+
+  max-width: 210px;
+
+  color: #243229;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   OPENLEP SOLUTION
+========================================================= */
+
+.openlep-solution {
+  position: relative;
+
+  overflow: hidden;
+
+  margin-top: 10px;
+
+  padding: 105px 70px 80px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #dcefe1 0%,
+      #c8e3ce 100%
+    );
+
+  box-shadow:
+    0 25px 60px
+    rgba(45, 90, 59, 0.10);
+}
+
+.openlep-solution::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: -250px;
+  right: -170px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.58),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+.solution-intro {
+  position: relative;
+
+  max-width: 900px;
+
+  margin-bottom: 85px;
+}
+
+.solution-intro .section-label{
+font-size: 20px;
+}
+
+.solution-intro h2 {
+  margin: 0 0 30px;
+
+  color: #18221c;
+
+  font-size: clamp(55px, 7vw, 96px);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+}
+
+.solution-intro h2 span {
+  color: #39714c;
+}
+
+.solution-intro p {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #52675a;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOLUTION STATEMENT
+========================================================= */
+
+.solution-statement {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 60px;
+
+  max-width: 950px;
+
+  padding: 35px 0;
+
+  border-top:
+    1px solid
+    rgba(57, 113, 76, 0.35);
+
+  border-bottom:
+    1px solid
+    rgba(57, 113, 76, 0.35);
+
+  margin-bottom: 65px;
+}
+
+.solution-statement p {
+  margin: 0;
+
+  color: #52675a;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.solution-statement p:first-child {
+  color: #18221c;
+
+  font-family:
+    var(--font-display, Georgia, serif);
+
+  font-size: 24px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
+}
+
+.solution-statement strong {
+  color: #39714c;
+}
+
+
+/* =========================================================
+   SOLUTION FRAMEWORK COMPONENTS
+========================================================= */
+
+.openlep-solution .architecture-components {
   position: relative;
 
   display: grid;
@@ -544,38 +945,28 @@
 
   align-items: center;
 
-  margin-top: 55px;
-
-  padding-bottom: 10px;
+  margin-top: 0;
 }
 
-
-/* =========================================================
-   COMPONENT
-========================================================= */
-
-.architecture-component {
-  position: relative;
-
+.openlep-solution .architecture-component {
   display: flex;
 
   align-items: center;
 
-  gap: 13px;
+  gap: 14px;
 
-  min-height: 75px;
+  min-height: 80px;
 
-  padding: 15px 17px;
+  padding: 15px;
 
-  border: 1px solid #d7e3da;
+  border:
+    1px solid
+    rgba(57, 113, 76, 0.22);
 
   border-radius: 9px;
 
-  background: #ffffff;
-
-  box-shadow:
-    0 10px 25px
-    rgba(36, 60, 44, 0.045);
+  background:
+    rgba(255, 255, 255, 0.42);
 }
 
 .component-number {
@@ -589,16 +980,17 @@
   width: 36px;
   height: 36px;
 
-  border: 1px solid #c5d8ca;
+  border:
+    1px solid
+    rgba(57, 113, 76, 0.25);
 
   border-radius: 50%;
 
-  background: #edf5ef;
+  background: rgba(255, 255, 255, 0.5);
 
   color: #39714c;
 
   font-size: 9px;
-
   font-weight: 800;
 }
 
@@ -607,10 +999,9 @@
 
   margin-bottom: 4px;
 
-  color: #779080;
+  color: #6e8875;
 
   font-size: 7px;
-
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -620,14 +1011,8 @@
   color: #243229;
 
   font-size: 13px;
-
   font-weight: 700;
 }
-
-
-/* =========================================================
-   CONNECTING LINES
-========================================================= */
 
 .component-connector {
   position: relative;
@@ -637,9 +1022,9 @@
   background:
     linear-gradient(
       90deg,
-      #b7cdbb,
+      transparent,
       #719b7c,
-      #b7cdbb
+      transparent
     );
 }
 
@@ -647,6 +1032,7 @@
   position: absolute;
 
   top: 50%;
+  right: 0;
 
   width: 7px;
   height: 7px;
@@ -659,9 +1045,50 @@
     rotate(45deg);
 }
 
-.component-connector:first-of-type span,
-.component-connector:nth-of-type(2) span {
-  right: 0;
+
+/* =========================================================
+   FINAL STATEMENT
+========================================================= */
+
+.hero-final {
+  padding: 150px 20px;
+
+  text-align: center;
+}
+
+.hero-final .section-label {
+  margin-bottom: 25px;
+}
+
+.hero-final h2 {
+  max-width: 950px;
+
+  margin: 0 auto 35px;
+
+  color: #18221c;
+
+  font-size: clamp(52px, 7vw, 95px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.hero-final h2 span {
+  color: #39714c;
+}
+
+.hero-final p {
+
+  margin: 0 auto 35px;
+
+  color: #66736a;
+
+  font-size: 15px;
+
+  line-height: 1.7;
 }
 
 
@@ -669,34 +1096,50 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
-
-  .hero {
-    padding: 85px 0 75px;
-  }
+@media (max-width: 900px) {
 
   .hero-top {
     grid-template-columns: 1fr;
 
-    gap: 35px;
-  }
-
-  .hero-content {
-    max-width: 760px;
+    gap: 40px;
   }
 
   .framework-header {
-    max-width: 600px;
+    max-width: 620px;
   }
 
   .framework-line {
     display: none;
   }
 
-  .language-map-card {
-    min-height: 400px;
+  .problem-section,
+  .openlep-solution {
+    padding: 75px 45px;
+  }
 
-    padding: 20px;
+  .problem-content,
+  .gap-content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .impact-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .landscape-caption {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .openlep-solution .architecture-components {
+    grid-template-columns:
+      1fr
+      50px
+      1fr
+      50px
+      1fr;
   }
 }
 
@@ -708,26 +1151,25 @@
 @media (max-width: 650px) {
 
   .hero {
-    padding: 60px 0;
+    padding-top: 60px;
   }
 
   .hero-container {
     width: calc(100% - 32px);
   }
 
-  .hero-top {
-    padding-bottom: 35px;
 
-    gap: 30px;
+  /* HERO */
+
+  .hero-top {
+    gap: 35px;
+
+    padding-bottom: 60px;
   }
 
   .hero h1 {
     font-size:
-      clamp(
-        45px,
-        13vw,
-        62px
-      );
+      clamp(45px, 13vw, 62px);
   }
 
   .hero-description {
@@ -758,16 +1200,16 @@
     font-size: 22px;
   }
 
-  .language-map-header {
-    align-items: flex-start;
 
-    flex-direction: column;
+  /* LANDSCAPE */
 
-    gap: 12px;
+  .language-landscape {
+    padding-top: 45px;
   }
 
-  .language-map-heading h2 {
-    font-size: 29px;
+  .landscape-intro h2 {
+    font-size:
+      clamp(40px, 12vw, 58px);
   }
 
   .language-map-card {
@@ -784,24 +1226,151 @@
     margin-left: -7.5%;
   }
 
-  .language-map-footer {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 5px;
-  }
-
-  .architecture-components {
+  .landscape-caption {
     grid-template-columns: 1fr;
 
-    gap: 0;
+    gap: 10px;
+  }
 
+
+  /* PROBLEM */
+
+  .problem-section {
+    margin-top: 90px;
+
+    padding: 60px 22px;
+
+    border-radius: 12px;
+  }
+
+  .problem-heading {
+    margin-bottom: 55px;
+  }
+
+  .problem-heading h2 {
+    font-size:
+      clamp(43px, 12.5vw, 62px);
+  }
+
+  .problem-content {
+    gap: 30px;
+  }
+
+  .problem-lead {
+    font-size: 23px;
+  }
+
+
+  /* IMPACT */
+
+  .impact-section {
+    padding: 90px 0 10px;
+  }
+
+  .impact-header {
+    margin-bottom: 50px;
+  }
+
+  .impact-header h2 {
+    font-size:
+      clamp(43px, 12.5vw, 62px);
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card,
+  .impact-card:first-child {
+    min-height: auto;
+
+    padding: 25px 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid #cbd8ce;
+  }
+
+  .impact-card:last-child {
+    border-bottom: none;
+  }
+
+  .impact-card h3 {
     margin-top: 35px;
   }
 
-  .architecture-component {
-    min-height: 65px;
+
+  /* GAP */
+
+  .infrastructure-gap {
+    padding: 90px 0;
+  }
+
+  .gap-heading {
+    margin-bottom: 55px;
+  }
+
+  .gap-heading h2 {
+    font-size:
+      clamp(44px, 13vw, 66px);
+  }
+
+  .gap-content {
+    gap: 40px;
+  }
+
+  .gap-questions {
+    grid-template-columns: 1fr;
+  }
+
+  .gap-questions > div {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .gap-questions span {
+    margin-bottom: 20px;
+  }
+
+
+  /* SOLUTION */
+
+  .openlep-solution {
+    margin-top: 0;
+
+    padding: 65px 22px;
+
+    border-radius: 12px;
+  }
+
+  .solution-intro {
+    margin-bottom: 60px;
+  }
+
+  .solution-intro h2 {
+    font-size:
+      clamp(50px, 14vw, 72px);
+  }
+
+  .solution-statement {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+  }
+
+  .solution-statement p:first-child {
+    font-size: 22px;
+  }
+
+  .openlep-solution .architecture-components {
+    display: block;
+  }
+
+  .openlep-solution .architecture-component {
+    min-height: 70px;
   }
 
   .component-connector {
@@ -814,86 +1383,30 @@
     background:
       linear-gradient(
         180deg,
-        #b7cdbb,
-        #719b7c
+        #719b7c,
+        transparent
       );
   }
 
   .component-connector span {
     display: none;
   }
-}
-
- /* =========================================================
-    HERO STATEMENT
- ========================================================= */
-
-.hero-statement {
-  margin-top: 90px;
-
-  padding: 80px 40px 35px;
-
-  border-top: 1px solid #cbd8ce;
-
-  text-align: center;
-}
-
-.hero-statement p {
-  max-width: 950px;
-
-  margin: 0 auto;
-
-  color: #18221c;
-
-  font-family:
-    var(--font-display, Georgia, serif);
-
-  font-size: clamp(
-    32px,
-    4.5vw,
-    58px
-  );
-
-  font-weight: 500;
-
-  line-height: 1.08;
-
-  letter-spacing: -0.045em;
-}
-
-.hero-statement span {
-  color: #39714c;
-}
-
-.hero-statement em {
-  color: #66736a;
-
-  font-style: normal;
-}
 
 
-/* =========================================================
-   HERO STATEMENT — MOBILE
-========================================================= */
+  /* FINAL */
 
-@media (max-width: 650px) {
-
-  .hero-statement {
-    margin-top: 55px;
-
-    padding: 55px 10px 15px;
+  .hero-final {
+    padding: 100px 10px;
   }
 
-  .hero-statement p {
-    font-size: clamp(
-      30px,
-      9vw,
-      42px
-    );
+  .hero-final h2 {
+    font-size:
+      clamp(48px, 13vw, 70px);
+  }
 
-    line-height: 1.1;
-
-    letter-spacing: -0.04em;
+  .hero-final p {
+    font-size: 14px;
   }
 
 }
+

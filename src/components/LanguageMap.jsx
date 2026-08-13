@@ -344,15 +344,6 @@ function LanguageMap() {
 
         <div className="map-heading">
 
-          <span className="map-eyebrow">
-            LANGUAGE ACCESS LANDSCAPE
-          </span>
-
-          <h3>
-            Languages spoken across
-            the United States beside English
-          </h3>
-
           <p className="map-introduction">
             In the United States, over 27 million individuals are
             limited English proficient (LEP), yet federal oversight

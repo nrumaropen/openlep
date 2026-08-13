@@ -11,8 +11,6 @@ function Hero() {
 
         <div className="hero-top">
 
-          {/* HERO CONTENT */}
-
           <div className="hero-content">
 
             <p className="hero-eyebrow">
@@ -78,97 +76,368 @@ function Hero() {
 
 
         {/* ==================================================
-            LANGUAGE MAP
+            LANGUAGE ACCESS LANDSCAPE
         ================================================== */}
 
-        <section className="language-map-section">
+        <section className="language-landscape">
+
+          <div className="landscape-intro">
+
+            <div>
+              <span className="section-label">
+                01 — LANGUAGE ACCESS LANDSCAPE
+              </span>
+
+              <h2>
+                A country shaped by
+                <span> many languages.</span>
+              </h2>
+            </div>
+
+
+          </div>
+
+
+          {/* MAP */}
 
           <div className="language-map-card">
             <LanguageMap />
           </div>
 
-          <div className="language-map-footer" />
+        </section>
+
+
+        {/* ==================================================
+            THE PROBLEM
+        ================================================== */}
+
+        <section className="problem-section">
+
+          <div className="problem-heading">
+
+            <span className="section-label">
+              02 — THE PROBLEM
+            </span>
+
+            <h2>
+              Language access is often treated
+              <span> as a service, not infrastructure.</span>
+            </h2>
+
+          </div>
+
+
+          <div className="problem-content">
+
+            <p className="problem-lead">
+              Knowing which languages people speak is only the
+              beginning.
+            </p>
+
+            <p>
+              Organizations may offer translated documents,
+              interpretation, or multilingual websites, but the
+              systems behind these services are often fragmented.
+              There is rarely a consistent way to understand where
+              language barriers exist across an entire digital
+              experience.
+            </p>
+
+            <p>
+              This means that language access can depend on the
+              organization, the service, or even the individual
+              responsible for implementing it.
+            </p>
+
+          </div>
 
         </section>
 
 
         {/* ==================================================
-            FRAMEWORK COMPONENTS
+            HUMAN IMPACT
         ================================================== */}
 
-        <section className="architecture-components">
+        <section className="impact-section">
 
-          <div className="architecture-component">
+          <div className="impact-header">
 
-            <div className="component-number">
-              01
-            </div>
+            <span className="section-label">
+              03 — WHEN ACCESS FAILS
+            </span>
 
-            <div className="component-content">
+            <h2>
+              A language barrier can become
+              <span> a barrier to participation.</span>
+            </h2>
 
-              <span>
-                DEFINE
+          </div>
+
+
+          <div className="impact-grid">
+
+            <article className="impact-card">
+
+              <span className="impact-number">
+                01
               </span>
 
-              <strong>
-                Language Access
-              </strong>
+              <h3>
+                Finding information
+              </h3>
 
-            </div>
+              <p>
+                Important information may exist, but remain difficult
+                to find, navigate, or understand.
+              </p>
 
-          </div>
-
-
-          <div className="component-connector">
-            <span />
-          </div>
+            </article>
 
 
-          <div className="architecture-component">
+            <article className="impact-card">
 
-            <div className="component-number">
-              02
-            </div>
-
-            <div className="component-content">
-
-              <span>
-                ESTABLISH
+              <span className="impact-number">
+                02
               </span>
 
-              <strong>
-                Compliance
-              </strong>
+              <h3>
+                Accessing services
+              </h3>
 
-            </div>
+              <p>
+                A person may be unable to complete a form,
+                application, or digital service in a language they
+                understand.
+              </p>
 
-          </div>
+            </article>
 
 
-          <div className="component-connector">
-            <span />
-          </div>
+            <article className="impact-card">
 
-
-          <div className="architecture-component">
-
-            <div className="component-number">
-              03
-            </div>
-
-            <div className="component-content">
-
-              <span>
-                BUILD
+              <span className="impact-number">
+                03
               </span>
 
-              <strong>
-                Infrastructure
-              </strong>
+              <h3>
+                Making decisions
+              </h3>
+
+              <p>
+                Incomplete language access can make it harder for
+                people to understand their options and make informed
+                decisions.
+              </p>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* ==================================================
+            INFRASTRUCTURE GAP
+        ================================================== */}
+
+        <section className="infrastructure-gap">
+
+          <div className="gap-heading">
+
+            <span className="section-label">
+              04 — THE INFRASTRUCTURE GAP
+            </span>
+
+            <h2>
+              The problem isn't only
+              <span> translation.</span>
+            </h2>
+
+          </div>
+
+
+          <div className="gap-content">
+
+            <p>
+              Organizations need a way to understand, document,
+              and continuously improve language access across
+              their digital services.
+            </p>
+
+            <div className="gap-questions">
+
+              <div>
+                <span>01</span>
+                <strong>
+                  What languages should we support?
+                </strong>
+              </div>
+
+              <div>
+                <span>02</span>
+                <strong>
+                  Where are the gaps in our services?
+                </strong>
+              </div>
+
+              <div>
+                <span>03</span>
+                <strong>
+                  How do we evaluate language accessibility?
+                </strong>
+              </div>
+
+              <div>
+                <span>04</span>
+                <strong>
+                  How do we improve access over time?
+                </strong>
+              </div>
 
             </div>
 
           </div>
+
+        </section>
+
+
+        {/* ==================================================
+            OPENLEP SOLUTION
+        ================================================== */}
+
+        <section className="openlep-solution">
+
+          <div className="solution-intro">
+
+            <span className="section-label">
+              05 — THE SOLUTION
+            </span>
+
+            <h2>
+              Meet <span>OpenLEP.</span>
+            </h2>
+
+            <p>
+              An open framework for building language access into
+              digital infrastructure from the start.
+            </p>
+
+          </div>
+
+
+          <div className="solution-statement">
+
+            <p>
+              OpenLEP gives organizations a shared way to
+              <strong> design, document, and evaluate </strong>
+              language access across digital services.
+            </p>
+
+            <p>
+              Instead of treating language access as a one-time
+              translation task, OpenLEP treats it as an ongoing
+              part of digital infrastructure.
+            </p>
+
+          </div>
+
+
+          {/* FRAMEWORK COMPONENTS */}
+
+          <section className="architecture-components">
+
+            <div className="architecture-component">
+
+              <div className="component-number">
+                01
+              </div>
+
+              <div className="component-content">
+
+                <span>
+                  DEFINE
+                </span>
+
+                <strong>
+                  Language Access
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div className="component-connector">
+              <span />
+            </div>
+
+
+            <div className="architecture-component">
+
+              <div className="component-number">
+                02
+              </div>
+
+              <div className="component-content">
+
+                <span>
+                  ESTABLISH
+                </span>
+
+                <strong>
+                  Compliance
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div className="component-connector">
+              <span />
+            </div>
+
+
+            <div className="architecture-component">
+
+              <div className="component-number">
+                03
+              </div>
+
+              <div className="component-content">
+
+                <span>
+                  BUILD
+                </span>
+
+                <strong>
+                  Infrastructure
+                </strong>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </section>
+
+
+        {/* ==================================================
+            FINAL STATEMENT
+        ================================================== */}
+
+        <section className="hero-final">
+
+          <h2>
+            Language access should be
+            <span> built in.</span>
+          </h2>
+
+          <p>
+            OpenLEP provides the framework for making language
+            access visible, measurable, and actionable.
+          </p>
 
         </section>
 

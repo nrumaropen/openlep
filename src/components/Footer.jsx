@@ -16,7 +16,6 @@ function Footer() {
 
           <div className="footer-links">
             <a href="#problem">Problem</a>
-            <a href="#components">Components</a>
             <a href="#architecture">Architecture</a>
             <a href="/docs">Documentation</a>
           </div>

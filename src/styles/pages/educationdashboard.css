@@ -1,0 +1,320 @@
+/* =========================================================
+   EDUCATION LANGUAGE ACCESS DASHBOARD
+   ========================================================= */
+
+.education-dashboard {
+  min-height: 100vh;
+  background: #fbf8f6;
+  color: #342c2b;
+}
+
+.education-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.education-hero {
+  padding: 78px 0 74px;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #542b35 0%,
+    #713b48 55%,
+    #92515b 100%
+  );
+}
+
+.education-eyebrow {
+  margin: 0 0 18px;
+  color: #f3c9a8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.education-hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.education-hero h1 span {
+  color: #f3c9a8;
+}
+
+.education-hero p {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.education-section {
+  padding: 65px 0 90px;
+}
+
+
+/* =========================================================
+   KPI CARDS
+   ========================================================= */
+
+.education-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.education-card {
+  padding: 24px;
+  border: 1px solid #eadfdc;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(80, 45, 45, 0.05);
+}
+
+.education-card h3 {
+  margin: 0 0 14px;
+  color: #756666;
+  font-size: 13px;
+}
+
+.education-card strong {
+  display: block;
+  color: #783f4d;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.education-card p {
+  margin: 13px 0 0;
+  color: #786f6d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.education-panel {
+  padding: 28px;
+  margin-bottom: 20px;
+  border: 1px solid #eadfdc;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(80, 45, 45, 0.04);
+}
+
+.education-panel-heading {
+  margin-bottom: 26px;
+}
+
+.education-panel-heading span {
+  display: block;
+  margin-bottom: 8px;
+  color: #a06452;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.education-panel-heading h2 {
+  margin: 0;
+  color: #50343a;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   LANGUAGE BARS
+   ========================================================= */
+
+.education-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.education-language-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 55px;
+  align-items: center;
+  gap: 18px;
+  color: #5f5655;
+  font-size: 13px;
+}
+
+.education-language-row strong {
+  color: #503c40;
+  text-align: right;
+}
+
+.education-bar {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f1e9e6;
+}
+
+.education-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #b86b5d;
+}
+
+
+/* =========================================================
+   SCHOOL TABLE
+   ========================================================= */
+
+.education-table {
+  width: 100%;
+}
+
+.education-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0e9e7;
+  color: #665c5a;
+  font-size: 13px;
+}
+
+.education-table-row:last-child {
+  border-bottom: none;
+}
+
+.education-table-header {
+  padding-top: 0;
+  color: #847876;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.education-table-row strong {
+  color: #9a6742;
+}
+
+
+/* =========================================================
+   ACCESS GAPS
+   ========================================================= */
+
+.education-gap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.education-gap-card {
+  padding: 21px;
+  border: 1px solid #eee3df;
+  border-radius: 10px;
+  background: #fcf7f5;
+}
+
+.education-gap-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: #f0d8cf;
+  color: #7d4a43;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.education-gap-card h3 {
+  margin: 0 0 10px;
+  color: #563b3c;
+  font-size: 14px;
+}
+
+.education-gap-card p {
+  margin: 0;
+  color: #786d6b;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .education-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-gap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .education-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .education-hero {
+    padding: 55px 0;
+  }
+
+  .education-hero h1 {
+    font-size: 44px;
+  }
+
+  .education-hero p {
+    font-size: 16px;
+  }
+
+  .education-section {
+    padding: 45px 0 65px;
+  }
+
+  .education-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .education-panel {
+    padding: 21px;
+  }
+
+  .education-language-row {
+    grid-template-columns: 100px 1fr 45px;
+    gap: 10px;
+  }
+
+  .education-table {
+    min-width: 620px;
+  }
+
+  .education-panel:has(.education-table) {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,738 @@
+/* =========================================================
+   DMV EXECUTIVE DASHBOARD
+   ========================================================= */
+
+.dmv-dashboard {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #172333;
+}
+
+.dmv-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.dmv-hero {
+  padding: 70px 0 65px;
+  background: linear-gradient(135deg, #14263b, #1e3854);
+  color: #fff;
+}
+
+.dmv-eyebrow {
+  margin: 0 0 18px;
+  color: #f5b642;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.dmv-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 35px;
+}
+
+.dmv-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.dmv-hero h1 span {
+  color: #f5b642;
+}
+
+.dmv-hero p {
+  max-width: 720px;
+  margin: 22px 0 0;
+  color: rgba(255,255,255,.72);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.dmv-live {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.dmv-live span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #54c88a;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.dmv-section {
+  padding: 55px 0 90px;
+}
+
+
+/* =========================================================
+   KPI
+   ========================================================= */
+
+.dmv-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dmv-kpi {
+  padding: 22px;
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(21,35,51,.04);
+}
+
+.dmv-kpi > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #687585;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dmv-kpi strong {
+  display: block;
+  color: #172b40;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+
+.dmv-kpi small {
+  display: block;
+  margin-top: 13px;
+  color: #7b8793;
+  font-size: 11px;
+}
+
+.dmv-kpi small.positive {
+  color: #2d875c;
+}
+
+.dmv-kpi small.warning {
+  color: #bd7c20;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.dmv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.dmv-grid-main {
+  grid-template-columns: 1.45fr .75fr;
+}
+
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+
+.dmv-panel {
+  padding: 25px;
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(21,35,51,.035);
+  margin-bottom: 18px;
+}
+
+.dmv-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.dmv-panel-header span:first-child {
+  display: block;
+  margin-bottom: 8px;
+  color: #8b6b32;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.dmv-panel-header h2 {
+  margin: 0;
+  color: #1c2e41;
+  font-size: 21px;
+  letter-spacing: -.02em;
+}
+
+.dmv-select {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #d9dfe5;
+  border-radius: 7px;
+  background: #fff;
+  color: #394b5c;
+}
+
+
+/* =========================================================
+   TRAFFIC CHART
+   ========================================================= */
+
+.dmv-chart {
+  display: flex;
+  height: 245px;
+}
+
+.dmv-y-axis {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 26px;
+  color: #9aa5af;
+  font-size: 9px;
+}
+
+.dmv-chart-body {
+  position: relative;
+  flex: 1;
+}
+
+.dmv-chart-lines {
+  position: absolute;
+  inset: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dmv-chart-lines i {
+  display: block;
+  border-top: 1px dashed #e7eaed;
+}
+
+.dmv-bars {
+  position: absolute;
+  inset: 0 0 27px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.dmv-bars div {
+  width: 100%;
+  max-width: 27px;
+  border-radius: 5px 5px 2px 2px;
+  background: #e3a632;
+}
+
+.dmv-bars div:nth-child(5),
+.dmv-bars div:nth-child(6) {
+  background: #d58d20;
+}
+
+.dmv-x-axis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #8d99a5;
+  font-size: 9px;
+}
+
+.dmv-chart-summary {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f2;
+  color: #7b8792;
+  font-size: 11px;
+}
+
+.dmv-chart-summary strong {
+  color: #263b50;
+}
+
+
+/* =========================================================
+   SERVICE MIX
+   ========================================================= */
+
+.dmv-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dmv-service > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.dmv-service span {
+  color: #596b7b;
+  font-size: 12px;
+}
+
+.dmv-service strong {
+  color: #263b4d;
+  font-size: 12px;
+}
+
+.dmv-progress {
+  height: 7px;
+  border-radius: 999px;
+  background: #edf0f3;
+  overflow: hidden;
+}
+
+.dmv-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #d99a2b;
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.dmv-map {
+  height: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dmv-map-area {
+  position: relative;
+  width: 330px;
+  height: 230px;
+}
+
+.dmv-region {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #26394b;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(20,35,50,.08);
+}
+
+.dmv-region strong {
+  font-size: 11px;
+}
+
+.dmv-region span {
+  margin-top: 4px;
+  font-size: 9px;
+}
+
+.dmv-region-north {
+  top: 0;
+  left: 100px;
+  width: 130px;
+  height: 60px;
+  border-radius: 60px 60px 15px 15px;
+  background: #f4d98e;
+}
+
+.dmv-region-west {
+  top: 57px;
+  left: 30px;
+  width: 105px;
+  height: 105px;
+  background: #edc76b;
+  border-radius: 25px 10px 10px 35px;
+}
+
+.dmv-region-central {
+  top: 58px;
+  left: 115px;
+  width: 105px;
+  height: 105px;
+  background: #d99a2b;
+  color: #fff;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.dmv-region-east {
+  top: 57px;
+  right: 15px;
+  width: 105px;
+  height: 105px;
+  background: #e9b94e;
+  border-radius: 10px 30px 30px 10px;
+}
+
+.dmv-region-south {
+  bottom: 0;
+  left: 92px;
+  width: 145px;
+  height: 70px;
+  background: #f1d37f;
+  border-radius: 15px 15px 60px 60px;
+}
+
+.dmv-map-legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+  color: #7b8792;
+  font-size: 10px;
+}
+
+.dmv-map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dmv-map-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+.dmv-map-legend .low {
+  background: #f4d98e;
+}
+
+.dmv-map-legend .medium {
+  background: #e9b94e;
+}
+
+.dmv-map-legend .high {
+  background: #d99a2b;
+}
+
+
+/* =========================================================
+   OFFICE TABLE
+   ========================================================= */
+
+.dmv-office-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.dmv-office-row {
+  display: grid;
+  grid-template-columns: 1.7fr .7fr .65fr;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f2;
+  color: #526473;
+  font-size: 12px;
+}
+
+.dmv-office-row:last-child {
+  border-bottom: none;
+}
+
+.dmv-office-row strong {
+  color: #34485a;
+}
+
+.dmv-office-row b {
+  font-size: 11px;
+}
+
+.dmv-office-header {
+  padding-top: 0;
+  color: #8a96a1;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.dmv-office-row .good {
+  color: #31805a;
+}
+
+.dmv-office-row .warning {
+  color: #bc7a20;
+}
+
+.dmv-office-row .danger {
+  color: #b64e4e;
+}
+
+
+/* =========================================================
+   CAPACITY
+   ========================================================= */
+
+.dmv-capacity-badge,
+.dmv-badge {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #fff4dc;
+  color: #98671f;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dmv-capacity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.dmv-capacity-card {
+  padding: 18px;
+  border: 1px solid #e8ebee;
+  border-radius: 9px;
+  background: #fafbfc;
+}
+
+.dmv-capacity-card > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dmv-capacity-card span {
+  color: #586b7a;
+  font-size: 12px;
+}
+
+.dmv-capacity-card strong {
+  color: #263b4d;
+  font-size: 18px;
+}
+
+.dmv-capacity-track {
+  height: 7px;
+  border-radius: 999px;
+  background: #e7ebee;
+  overflow: hidden;
+}
+
+.dmv-capacity-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #d99a2b;
+}
+
+.dmv-capacity-card small {
+  display: block;
+  margin-top: 9px;
+  color: #8a96a0;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LANGUAGE ACCESS
+   ========================================================= */
+
+.dmv-language-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.dmv-language > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.dmv-language span {
+  color: #596b7a;
+  font-size: 11px;
+}
+
+.dmv-language strong {
+  color: #263b4d;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   EXECUTIVE ALERT
+   ========================================================= */
+
+.dmv-alert {
+  display: flex;
+  gap: 18px;
+  padding: 25px;
+  border: 1px solid #f0d39b;
+  border-radius: 12px;
+  background: #fff9ed;
+}
+
+.dmv-alert-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #e4a52e;
+  color: #fff;
+  font-weight: 900;
+}
+
+.dmv-alert span {
+  color: #a36f1f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.dmv-alert h2 {
+  margin: 7px 0 8px;
+  color: #26394a;
+  font-size: 19px;
+}
+
+.dmv-alert p {
+  max-width: 850px;
+  margin: 0;
+  color: #697887;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .dmv-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dmv-grid,
+  .dmv-grid-main {
+    grid-template-columns: 1fr;
+  }
+
+  .dmv-capacity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dmv-language-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .dmv-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .dmv-hero {
+    padding: 52px 0;
+  }
+
+  .dmv-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dmv-hero h1 {
+    font-size: 43px;
+  }
+
+  .dmv-section {
+    padding: 40px 0 65px;
+  }
+
+  .dmv-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .dmv-panel {
+    padding: 20px;
+  }
+
+  .dmv-panel-header {
+    flex-direction: column;
+  }
+
+  .dmv-office-row {
+    grid-template-columns: 1.5fr .6fr .6fr;
+  }
+
+  .dmv-language-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dmv-alert {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .dmv-hero h1 {
+    font-size: 36px;
+  }
+
+  .dmv-kpi strong {
+    font-size: 28px;
+  }
+
+  .dmv-chart {
+    height: 210px;
+  }
+
+  .dmv-map-area {
+    transform: scale(.82);
+  }
+}

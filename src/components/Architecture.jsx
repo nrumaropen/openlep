@@ -3,45 +3,49 @@ import Footer from "./Footer";
 function Architecture() {
   return (
     <>
-
       <main className="inner-page">
+        {/* PAGE HERO */}
         <section className="page-hero">
           <div className="section-container">
-            <p className="eyebrow">OPENLEP ARCHITECTURE</p>
+            <p className="eyebrow">FRAMEWORK ARCHITECTURE</p>
 
             <h1>
-              From language-access needs to
-              <span> actionable intelligence.</span>
+              Connecting policy,
+              <span> implementation, and evaluation.</span>
             </h1>
 
             <p>
-              OpenLEP proposes a layered architecture that connects language
-              access data, workflows, analytics, and decision-support tools.
+              The OpenLEP Framework provides a structured architecture for
+              translating language access requirements into organizational
+              implementation, measurable outcomes, and continuous improvement.
             </p>
           </div>
         </section>
 
+        {/* FRAMEWORK ARCHITECTURE */}
         <section className="section">
           <div className="section-container">
             <div className="section-heading">
-              <p className="eyebrow">SYSTEM ARCHITECTURE</p>
+              <p className="eyebrow">HOW THE FRAMEWORK WORKS</p>
 
-              <h2>How the OpenLEP framework works</h2>
+              <h2>Five interconnected layers</h2>
 
               <p>
-                The proposed architecture connects operational language-access
-                activities with structured data, analytical processes, and
-                user-facing applications.
+                OpenLEP connects language access standards with organizational
+                processes, structured data, and evaluation through a continuous
+                implementation framework.
               </p>
             </div>
 
             <div className="architecture-flow">
+
               <div className="architecture-card">
                 <span>01</span>
-                <h3>Language Access Needs</h3>
+                <h3>Language Access Standards</h3>
                 <p>
-                  Language requests, service needs, language preferences, and
-                  institutional demand enter the system.
+                  Establishes common terminology, policy requirements, and
+                  language access principles that provide a consistent
+                  foundation across organizations.
                 </p>
               </div>
 
@@ -49,10 +53,11 @@ function Architecture() {
 
               <div className="architecture-card">
                 <span>02</span>
-                <h3>Data Layer</h3>
+                <h3>Compliance Infrastructure</h3>
                 <p>
-                  Structured data models organize requests, services,
-                  institutions, languages, and performance indicators.
+                  Connects standards with governance, organizational
+                  responsibilities, operational workflows, and compliance
+                  processes.
                 </p>
               </div>
 
@@ -60,10 +65,11 @@ function Architecture() {
 
               <div className="architecture-card">
                 <span>03</span>
-                <h3>OpenLEP Core</h3>
+                <h3>Operational Implementation</h3>
                 <p>
-                  APIs, workflows, validation rules, and interoperability
-                  components connect the underlying language-access systems.
+                  Supports the delivery of language access services while
+                  documenting activities, decisions, and implementation across
+                  programs and institutions.
                 </p>
               </div>
 
@@ -71,11 +77,11 @@ function Architecture() {
 
               <div className="architecture-card">
                 <span>04</span>
-                <h3>Analytics & AI</h3>
+                <h3>Data Model</h3>
                 <p>
-                  Analytical and AI-assisted processes identify trends,
-                  service gaps, demand patterns, and potential areas for
-                  intervention.
+                  Organizes language access information into a structured data
+                  model that supports interoperability, monitoring, reporting,
+                  and evidence-based analysis.
                 </p>
               </div>
 
@@ -83,30 +89,34 @@ function Architecture() {
 
               <div className="architecture-card">
                 <span>05</span>
-                <h3>Applications</h3>
+                <h3>Monitoring & Evaluation</h3>
                 <p>
-                  Dashboards, reports, alerts, and decision-support tools
-                  present information to organizations and stakeholders.
+                  Measures implementation, identifies service gaps, and
+                  provides organizations with actionable insights for
+                  continuous improvement and accountability.
                 </p>
               </div>
+
             </div>
           </div>
         </section>
 
+        {/* DESIGN PRINCIPLE */}
         <section className="section about-highlight">
           <div className="section-container">
             <div className="highlight-box">
-              <p className="eyebrow">DESIGN PRINCIPLE</p>
+              <p className="eyebrow">FRAMEWORK PRINCIPLE</p>
 
               <h2>
-                Connect existing systems instead of replacing them.
+                Connect systems. Standardize implementation. Improve outcomes.
               </h2>
 
               <p>
-                OpenLEP is envisioned as an interoperable framework. The goal
-                is to provide common structures and interfaces that can help
-                organizations connect existing language-access processes and
-                technologies rather than requiring a single system or vendor.
+                OpenLEP is designed as an open framework rather than a single
+                software platform. Organizations can adopt the framework using
+                their existing technologies while benefiting from a common
+                structure for language access planning, implementation,
+                compliance, and evaluation.
               </p>
             </div>
           </div>

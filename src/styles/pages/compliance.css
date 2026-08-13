@@ -1,0 +1,501 @@
+/* =========================================================
+   LANGUAGE ACCESS COMPLIANCE DASHBOARD
+   ========================================================= */
+
+.compliance-dashboard {
+  min-height: 100vh;
+  background: #f7f7f4;
+  color: #292d2a;
+}
+
+.compliance-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.compliance-hero {
+  padding: 78px 0 74px;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #252b29 0%,
+    #39413d 55%,
+    #4d5851 100%
+  );
+}
+
+.compliance-eyebrow {
+  margin: 0 0 18px;
+  color: #e4b45f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.compliance-hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.compliance-hero h1 span {
+  color: #e4b45f;
+}
+
+.compliance-hero p {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.compliance-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d9dfdc;
+  font-size: 12px;
+}
+
+.compliance-status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #67b58a;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.compliance-section {
+  padding: 65px 0 90px;
+}
+
+
+/* =========================================================
+   KPI
+   ========================================================= */
+
+.compliance-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.compliance-card {
+  padding: 24px;
+  border: 1px solid #e1e3df;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(40, 45, 42, 0.04);
+}
+
+.compliance-card p {
+  margin: 0 0 14px;
+  color: #707873;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.compliance-card strong {
+  display: block;
+  color: #303a35;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.compliance-card span {
+  display: block;
+  margin-top: 13px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.compliance-positive {
+  color: #34805b;
+}
+
+.compliance-warning {
+  color: #b27b2d;
+}
+
+.compliance-danger {
+  color: #b45151;
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.compliance-panel {
+  padding: 28px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e3df;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(40, 45, 42, 0.035);
+}
+
+.compliance-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.compliance-panel-heading > div:first-child span {
+  display: block;
+  margin-bottom: 8px;
+  color: #a1722d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.compliance-panel-heading h2 {
+  margin: 0;
+  color: #303b35;
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   SCORE
+   ========================================================= */
+
+.compliance-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: #f0f5f1;
+  border: 5px solid #70a184;
+}
+
+.compliance-score strong {
+  color: #315b43;
+  font-size: 20px;
+}
+
+.compliance-score small {
+  color: #748078;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.compliance-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 35px;
+}
+
+.compliance-metric > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.compliance-metric span {
+  color: #65706a;
+  font-size: 12px;
+}
+
+.compliance-metric strong {
+  color: #35423b;
+  font-size: 12px;
+}
+
+.compliance-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf0ed;
+}
+
+.compliance-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #6c997d;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.compliance-table {
+  width: 100%;
+}
+
+.compliance-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.7fr 0.8fr;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0ed;
+  color: #5f6964;
+  font-size: 13px;
+}
+
+.compliance-table-row:last-child {
+  border-bottom: none;
+}
+
+.compliance-table-header {
+  padding-top: 0;
+  color: #7b847f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.compliance-table-row strong {
+  color: #35433b;
+}
+
+
+/* STATUS */
+
+.compliance-table-row b {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+}
+
+.status-compliant {
+  background: #eaf5ee;
+  color: #397453;
+}
+
+.status-review {
+  background: #fff3dc;
+  color: #9a6b25;
+}
+
+.status-action {
+  background: #fdeaea;
+  color: #a94e4e;
+}
+
+
+/* =========================================================
+   GAPS
+   ========================================================= */
+
+.compliance-gap-count {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #f0f1ef;
+  color: #5d6761;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.compliance-gap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.compliance-gap-card {
+  padding: 21px;
+  border: 1px solid #e5e6e3;
+  border-radius: 10px;
+  background: #fafbf9;
+}
+
+.compliance-gap-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.compliance-gap-top span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.compliance-gap-top strong {
+  font-size: 22px;
+}
+
+.compliance-gap-card h3 {
+  margin: 0 0 9px;
+  color: #354139;
+  font-size: 14px;
+}
+
+.compliance-gap-card p {
+  margin: 0;
+  color: #737c77;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.compliance-gap-card.high {
+  border-top: 3px solid #bd5757;
+}
+
+.compliance-gap-card.high .compliance-gap-top {
+  color: #a84d4d;
+}
+
+.compliance-gap-card.medium {
+  border-top: 3px solid #c3913c;
+}
+
+.compliance-gap-card.medium .compliance-gap-top {
+  color: #9c712b;
+}
+
+.compliance-gap-card.low {
+  border-top: 3px solid #6c9b7c;
+}
+
+.compliance-gap-card.low .compliance-gap-top {
+  color: #4d7c5e;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.compliance-action {
+  display: flex;
+  gap: 20px;
+  padding: 27px;
+  border: 1px solid #eadbbf;
+  border-radius: 14px;
+  background: #fffaf0;
+}
+
+.compliance-action-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #d49a42;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.compliance-action span {
+  color: #a1722d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.compliance-action h2 {
+  margin: 7px 0 8px;
+  color: #4a3b27;
+  font-size: 19px;
+}
+
+.compliance-action p {
+  max-width: 780px;
+  margin: 0;
+  color: #756b5d;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .compliance-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .compliance-gap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .compliance-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .compliance-hero {
+    padding: 55px 0;
+  }
+
+  .compliance-hero h1 {
+    font-size: 44px;
+  }
+
+  .compliance-hero p {
+    font-size: 16px;
+  }
+
+  .compliance-section {
+    padding: 45px 0 65px;
+  }
+
+  .compliance-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-panel {
+    padding: 21px;
+  }
+
+  .compliance-panel-heading {
+    flex-direction: column;
+  }
+
+  .compliance-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-table {
+    min-width: 650px;
+  }
+
+  .compliance-panel:has(.compliance-table) {
+    overflow-x: auto;
+  }
+
+  .compliance-action {
+    flex-direction: column;
+  }
+}
