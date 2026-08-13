@@ -146,9 +146,7 @@ Developed the OpenLEP landing page and initial public-facing interface, includin
 
 ### Phase 3 — Documentation & Framework
 
-Current phase.
-
-The focus is expanding the `/docs` section and defining the OpenLEP framework, including:
+Expanded the `/docs` section and defined the OpenLEP framework, including:
 
 * Framework overview
 * Architecture
@@ -156,7 +154,15 @@ The focus is expanding the `/docs` section and defining the OpenLEP framework, i
 * Compliance model
 * Implementation concepts
 
-Future phases will continue developing the underlying framework, documentation, data structures, and implementation model.
+### Phase 4 — Data Schema & Initial Dashboard Implementation
+
+Current phase.
+
+* Completed the Language Access Compliance Data Schema (see `docs/compliance-mapping.md`), mapping schema fields to specific federal and state legal authorities, including Title VI of the Civil Rights Act, Executive Order 13166, DOJ LEP guidance, and Section 1557 of the Affordable Care Act.
+* Implemented the first working dashboard module (`Compliance.jsx`): compliance metrics are now computed from structured sample data rather than hardcoded, using the schema defined in `src/data/complianceData.json`.
+* Remaining dashboard modules (interpreter, education, hospital, DMV, and explore views) currently exist as designed interfaces and are pending the same data-computation build-out.
+
+Planned future work includes extending computed-data support to the remaining dashboards, automated report generation, and — as a longer-term goal — AI-assisted anomaly detection for identifying emerging service gaps. These are roadmap items, not currently implemented features.
 
 ---
 
@@ -202,19 +208,37 @@ http://localhost:5173
 ```text
 openlep/
 │
+├── docs/
+│   └── compliance-mapping.md       # schema-to-law citation mapping
+│
 ├── public/
 │
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
-│   │   └── Documentation.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Architecture.jsx
+│   │   ├── Problem.jsx
+│   │   └── LanguageMap.jsx
+│   │
+│   ├── data/
+│   │   └── complianceData.json     # sample data driving Compliance.jsx
 │   │
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Docs.jsx
-│   │   └── Contact.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Compliance.jsx          # computed from src/data
+│   │   ├── Dashboard.jsx
+│   │   ├── DMVDashboard.jsx
+│   │   ├── EducationDashboard.jsx
+│   │   ├── ExploreDashboard.jsx
+│   │   ├── HospitalLanguageAccess.jsx
+│   │   ├── InterpreterDashboard.jsx
+│   │   ├── LanguageAccessStandards.jsx
+│   │   └── DataEvaluation.jsx
 │   │
 │   ├── App.jsx
 │   ├── main.jsx
@@ -269,7 +293,7 @@ Implementation should be capable of being evaluated using structured information
 
 ## License
 
-License information will be added as the project reaches the appropriate stage of development.
+Released under the MIT License. See [LICENSE](./LICENSE) for full terms.
 
 ---
 
