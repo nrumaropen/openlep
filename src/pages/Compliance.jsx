@@ -1,6 +1,96 @@
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
+import complianceData from "../data/complianceData.json";
+
+// Turns raw records into the KPI numbers the dashboard shows.
+// Swap complianceData.json for a real API/DB call later — the shape
+// (serviceEvents, documentationRecords, staffTraining, complaints)
+// mirrors the ERD tables in Exhibit 18, so the shape shouldn't need to change.
+function computeMetrics(data) {
+  const { serviceEvents, documentationRecords, staffTraining, complaints } = data;
+
+  const interpreterEvents = serviceEvents.filter((e) => e.requires_interpreter);
+  const interpreterFulfillment = interpreterEvents.length
+    ? Math.round(
+        (interpreterEvents.filter((e) => e.completed_flag).length /
+          interpreterEvents.length) *
+          100
+      )
+    : 0;
+
+  const documentCompliance = documentationRecords.length
+    ? Math.round(
+        (documentationRecords.filter((d) => d.documented_flag).length /
+          documentationRecords.length) *
+          100
+      )
+    : 0;
+
+  const staffTrainingRate = staffTraining.length
+    ? Math.round(
+        (staffTraining.filter((s) => s.trained_flag).length /
+          staffTraining.length) *
+          100
+      )
+    : 0;
+
+  const translatedMaterialsRate = documentCompliance; // same underlying signal in this sample set
+
+  const overallCompliance = Math.round(
+    (interpreterFulfillment + documentCompliance + staffTrainingRate) / 3
+  );
+
+  const openGaps = complaints.filter((c) => c.status === "open");
+  const gapsBySeverity = {
+    high: openGaps.filter((c) => c.severity === "high").length,
+    medium: openGaps.filter((c) => c.severity === "medium").length,
+    low: openGaps.filter((c) => c.severity === "low").length,
+  };
+
+  return {
+    overallCompliance,
+    interpreterFulfillment,
+    documentCompliance,
+    staffTrainingRate,
+    translatedMaterialsRate,
+    openGapsCount: openGaps.length,
+    gapsBySeverity,
+  };
+}
 
 function Compliance() {
+  const [metrics, setMetrics] = useState(null);
+
+  useEffect(() => {
+    // Loaded from local JSON for now; swap for fetch("/api/compliance") later.
+    setMetrics(computeMetrics(complianceData));
+  }, []);
+
+  if (!metrics) {
+    return (
+      <main className="compliance-dashboard">
+        <div className="compliance-container">
+          <p>Loading compliance data…</p>
+        </div>
+      </main>
+    );
+  }
+
+  const {
+    overallCompliance,
+    interpreterFulfillment,
+    documentCompliance,
+    staffTrainingRate,
+    translatedMaterialsRate,
+    openGapsCount,
+    gapsBySeverity,
+  } = metrics;
+
+  const projectedCompliance = Math.min(
+    100,
+    overallCompliance + gapsBySeverity.high
+  );
+
   return (
     <>
       <main className="compliance-dashboard">
@@ -25,7 +115,7 @@ function Compliance() {
 
             <div className="compliance-status">
               <span></span>
-              Compliance monitoring active
+              Compliance monitoring active — sample dataset
             </div>
           </div>
         </section>
@@ -39,33 +129,33 @@ function Compliance() {
 
               <div className="compliance-card">
                 <p>Overall Compliance</p>
-                <strong>94%</strong>
+                <strong>{overallCompliance}%</strong>
                 <span className="compliance-positive">
-                  ↑ 3.2% this quarter
+                  Computed from sample records
                 </span>
               </div>
 
               <div className="compliance-card">
                 <p>Interpreter Fulfillment</p>
-                <strong>91%</strong>
+                <strong>{interpreterFulfillment}%</strong>
                 <span className="compliance-positive">
-                  ↑ 2.8% this quarter
+                  {complianceData.serviceEvents.filter((e) => e.requires_interpreter).length} interpreter events tracked
                 </span>
               </div>
 
               <div className="compliance-card">
                 <p>Document Compliance</p>
-                <strong>87%</strong>
-                <span className="compliance-warning">
-                  Needs attention
+                <strong>{documentCompliance}%</strong>
+                <span className={documentCompliance < 90 ? "compliance-warning" : "compliance-positive"}>
+                  {documentCompliance < 90 ? "Needs attention" : "On track"}
                 </span>
               </div>
 
               <div className="compliance-card">
                 <p>Open Compliance Gaps</p>
-                <strong>12</strong>
+                <strong>{openGapsCount}</strong>
                 <span className="compliance-danger">
-                  4 high priority
+                  {gapsBySeverity.high} high priority
                 </span>
               </div>
 
@@ -80,7 +170,7 @@ function Compliance() {
                 </div>
 
                 <div className="compliance-score">
-                  <strong>94%</strong>
+                  <strong>{overallCompliance}%</strong>
                   <small>Overall</small>
                 </div>
               </div>
@@ -90,112 +180,45 @@ function Compliance() {
                 <div className="compliance-metric">
                   <div>
                     <span>Interpreter Access</span>
-                    <strong>96%</strong>
+                    <strong>{interpreterFulfillment}%</strong>
                   </div>
 
                   <div className="compliance-track">
-                    <span style={{ width: "96%" }}></span>
+                    <span style={{ width: `${interpreterFulfillment}%` }}></span>
                   </div>
                 </div>
 
                 <div className="compliance-metric">
                   <div>
                     <span>Translated Materials</span>
-                    <strong>87%</strong>
+                    <strong>{translatedMaterialsRate}%</strong>
                   </div>
 
                   <div className="compliance-track">
-                    <span style={{ width: "87%" }}></span>
+                    <span style={{ width: `${translatedMaterialsRate}%` }}></span>
                   </div>
                 </div>
 
                 <div className="compliance-metric">
                   <div>
                     <span>Staff Training</span>
-                    <strong>92%</strong>
+                    <strong>{staffTrainingRate}%</strong>
                   </div>
 
                   <div className="compliance-track">
-                    <span style={{ width: "92%" }}></span>
+                    <span style={{ width: `${staffTrainingRate}%` }}></span>
                   </div>
                 </div>
 
                 <div className="compliance-metric">
                   <div>
                     <span>Documentation</span>
-                    <strong>84%</strong>
+                    <strong>{documentCompliance}%</strong>
                   </div>
 
                   <div className="compliance-track">
-                    <span style={{ width: "84%" }}></span>
+                    <span style={{ width: `${documentCompliance}%` }}></span>
                   </div>
-                </div>
-
-              </div>
-            </section>
-
-            {/* REQUIREMENTS */}
-            <section className="compliance-panel">
-
-              <div className="compliance-panel-heading">
-                <div>
-                  <span>REQUIREMENTS</span>
-                  <h2>Compliance Requirements</h2>
-                </div>
-              </div>
-
-              <div className="compliance-table">
-
-                <div className="compliance-table-row compliance-table-header">
-                  <span>Requirement</span>
-                  <span>Status</span>
-                  <span>Score</span>
-                  <span>Review</span>
-                </div>
-
-                <div className="compliance-table-row">
-                  <span>Interpreter Availability</span>
-                  <span>
-                    <b className="status-compliant">Compliant</b>
-                  </span>
-                  <strong>98%</strong>
-                  <span>Current</span>
-                </div>
-
-                <div className="compliance-table-row">
-                  <span>Language Identification</span>
-                  <span>
-                    <b className="status-compliant">Compliant</b>
-                  </span>
-                  <strong>95%</strong>
-                  <span>Current</span>
-                </div>
-
-                <div className="compliance-table-row">
-                  <span>Translated Materials</span>
-                  <span>
-                    <b className="status-review">Review</b>
-                  </span>
-                  <strong>87%</strong>
-                  <span>30 days</span>
-                </div>
-
-                <div className="compliance-table-row">
-                  <span>Staff Training</span>
-                  <span>
-                    <b className="status-compliant">Compliant</b>
-                  </span>
-                  <strong>92%</strong>
-                  <span>Current</span>
-                </div>
-
-                <div className="compliance-table-row">
-                  <span>Documentation</span>
-                  <span>
-                    <b className="status-action">Action Needed</b>
-                  </span>
-                  <strong>84%</strong>
-                  <span>14 days</span>
                 </div>
 
               </div>
@@ -211,7 +234,7 @@ function Compliance() {
                 </div>
 
                 <div className="compliance-gap-count">
-                  12 open
+                  {openGapsCount} open
                 </div>
               </div>
 
@@ -220,41 +243,42 @@ function Compliance() {
                 <div className="compliance-gap-card high">
                   <div className="compliance-gap-top">
                     <span>HIGH</span>
-                    <strong>04</strong>
+                    <strong>{String(gapsBySeverity.high).padStart(2, "0")}</strong>
                   </div>
 
-                  <h3>Documentation Gaps</h3>
+                  <h3>Language Access Complaints</h3>
 
                   <p>
-                    Missing documentation for completed language access
-                    services across several departments.
+                    Open complaints tied directly to interpreter or language
+                    access service failures.
                   </p>
                 </div>
 
                 <div className="compliance-gap-card medium">
                   <div className="compliance-gap-top">
                     <span>MEDIUM</span>
-                    <strong>05</strong>
+                    <strong>{String(gapsBySeverity.medium).padStart(2, "0")}</strong>
                   </div>
 
-                  <h3>Translation Backlog</h3>
+                  <h3>Documentation Gaps</h3>
 
                   <p>
-                    Required materials remain pending translation or review.
+                    Open complaints related to missing or incomplete
+                    documentation of language access services.
                   </p>
                 </div>
 
                 <div className="compliance-gap-card low">
                   <div className="compliance-gap-top">
                     <span>LOW</span>
-                    <strong>03</strong>
+                    <strong>{String(gapsBySeverity.low).padStart(2, "0")}</strong>
                   </div>
 
                   <h3>Training Updates</h3>
 
                   <p>
-                    Staff members are approaching required language access
-                    training renewal dates.
+                    Staff members approaching required language access
+                    training renewal.
                   </p>
                 </div>
 
@@ -272,13 +296,14 @@ function Compliance() {
                 <span>RECOMMENDED ACTION</span>
 
                 <h2>
-                  Address documentation gaps before the next review.
+                  Address {gapsBySeverity.high} high-priority language access
+                  {gapsBySeverity.high === 1 ? " gap" : " gaps"} before the next review.
                 </h2>
 
                 <p>
-                  Four high-priority documentation gaps require attention.
-                  Completing these items could increase overall compliance
-                  from 94% to approximately 97%.
+                  Resolving current high-priority gaps could raise overall
+                  compliance from {overallCompliance}% to approximately{" "}
+                  {projectedCompliance}%.
                 </p>
               </div>
 

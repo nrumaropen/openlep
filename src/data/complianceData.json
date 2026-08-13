@@ -1,0 +1,60 @@
+{
+  "_note": "SAMPLE / DEMO DATA — shaped to match the OpenLEP compliance data schema (Exhibit 18). Not live production data. Replace with a real data source (API/DB) once available.",
+
+  "serviceEvents": [
+    { "id": "se_001", "org_id": "org_1", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-02" },
+    { "id": "se_002", "org_id": "org_1", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-03" },
+    { "id": "se_003", "org_id": "org_1", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": false, "date": "2026-07-05" },
+    { "id": "se_004", "org_id": "org_2", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-06" },
+    { "id": "se_005", "org_id": "org_2", "service_channel": "written_translation", "requires_interpreter": false, "completed_flag": true, "date": "2026-07-08" },
+    { "id": "se_006", "org_id": "org_2", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-09" },
+    { "id": "se_007", "org_id": "org_1", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-11" },
+    { "id": "se_008", "org_id": "org_1", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-12" },
+    { "id": "se_009", "org_id": "org_2", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": false, "date": "2026-07-14" },
+    { "id": "se_010", "org_id": "org_2", "service_channel": "interpreter", "requires_interpreter": true, "completed_flag": true,  "date": "2026-07-15" }
+  ],
+
+  "documentationRecords": [
+    { "id": "doc_001", "service_event_id": "se_001", "documented_flag": true },
+    { "id": "doc_002", "service_event_id": "se_002", "documented_flag": true },
+    { "id": "doc_003", "service_event_id": "se_003", "documented_flag": false },
+    { "id": "doc_004", "service_event_id": "se_004", "documented_flag": true },
+    { "id": "doc_005", "service_event_id": "se_005", "documented_flag": true },
+    { "id": "doc_006", "service_event_id": "se_006", "documented_flag": false },
+    { "id": "doc_007", "service_event_id": "se_007", "documented_flag": true },
+    { "id": "doc_008", "service_event_id": "se_008", "documented_flag": false },
+    { "id": "doc_009", "service_event_id": "se_009", "documented_flag": true },
+    { "id": "doc_010", "service_event_id": "se_010", "documented_flag": true }
+  ],
+
+  "staffTraining": [
+    { "staff_id": "stf_001", "org_id": "org_1", "trained_flag": true },
+    { "staff_id": "stf_002", "org_id": "org_1", "trained_flag": true },
+    { "staff_id": "stf_003", "org_id": "org_1", "trained_flag": false },
+    { "staff_id": "stf_004", "org_id": "org_2", "trained_flag": true },
+    { "staff_id": "stf_005", "org_id": "org_2", "trained_flag": true },
+    { "staff_id": "stf_006", "org_id": "org_2", "trained_flag": true },
+    { "staff_id": "stf_007", "org_id": "org_2", "trained_flag": true },
+    { "staff_id": "stf_008", "org_id": "org_1", "trained_flag": true },
+    { "staff_id": "stf_009", "org_id": "org_2", "trained_flag": false },
+    { "staff_id": "stf_010", "org_id": "org_1", "trained_flag": true },
+    { "staff_id": "stf_011", "org_id": "org_2", "trained_flag": true },
+    { "staff_id": "stf_012", "org_id": "org_1", "trained_flag": true }
+  ],
+
+  "complaints": [
+    { "complaint_id": "cmp_001", "complaint_type": "language_access", "status": "open",   "severity": "high" },
+    { "complaint_id": "cmp_002", "complaint_type": "language_access", "status": "open",   "severity": "high" },
+    { "complaint_id": "cmp_003", "complaint_type": "language_access", "status": "open",   "severity": "high" },
+    { "complaint_id": "cmp_004", "complaint_type": "language_access", "status": "open",   "severity": "high" },
+    { "complaint_id": "cmp_005", "complaint_type": "documentation",   "status": "open",   "severity": "medium" },
+    { "complaint_id": "cmp_006", "complaint_type": "documentation",   "status": "open",   "severity": "medium" },
+    { "complaint_id": "cmp_007", "complaint_type": "documentation",   "status": "open",   "severity": "medium" },
+    { "complaint_id": "cmp_008", "complaint_type": "documentation",   "status": "open",   "severity": "medium" },
+    { "complaint_id": "cmp_009", "complaint_type": "documentation",   "status": "open",   "severity": "medium" },
+    { "complaint_id": "cmp_010", "complaint_type": "training",       "status": "open",   "severity": "low" },
+    { "complaint_id": "cmp_011", "complaint_type": "training",       "status": "open",   "severity": "low" },
+    { "complaint_id": "cmp_012", "complaint_type": "training",       "status": "open",   "severity": "low" },
+    { "complaint_id": "cmp_013", "complaint_type": "language_access", "status": "resolved", "severity": "high" }
+  ]
+}
