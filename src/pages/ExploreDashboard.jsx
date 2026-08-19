@@ -31,7 +31,6 @@ function ExploreDashboard() {
 
               {/* Dashboard 1 */}
               <a href="/openlep/#/compliance" className="dashboard-card">
-                <img src="/images/compliance-preview.png" alt="" />
 
                 <h3>Language Access Compliance</h3>
 
@@ -45,7 +44,6 @@ function ExploreDashboard() {
 
               {/* Dashboard 2 */}
               <a href="/openlep/#/dmvdashboard" className="dashboard-card">
-                <img src="/images/dmv-preview.png" alt="" />
 
                 <h3>DMV Compliance</h3>
 
@@ -58,7 +56,6 @@ function ExploreDashboard() {
 
               {/* Dashboard 3 */}
               <a href="/openlep/#/interpreter-dashboard" className="dashboard-card">
-                <img src="/images/interpreter-preview.png" alt="" />
 
                 <h3>Interpreter Services</h3>
 
@@ -72,13 +69,7 @@ function ExploreDashboard() {
 
               {/* Dashboard 4 */}
               <a
-                href="/openlep/#/hospital-language-access"
-                className="dashboard-card"
-              >
-                <img
-                  src="/images/hospital-preview.png"
-                  alt=""
-                />
+                href="/openlep/#/hospital-language-access" className="dashboard-card">
 
                 <h3>Hospital Language Access</h3>
 
@@ -93,22 +84,13 @@ function ExploreDashboard() {
 
               {/* Dashboard 5 */}
               <a
-                href="/openlep/#/education"
-                className="dashboard-card"
-              >
-                <img
-                  src="/images/education-preview.png"
-                  alt=""
-                />
-
+                href="/openlep/#/education" className="dashboard-card">
                 <h3>Education Language Access</h3>
-
                 <p>
                   Monitor multilingual student populations, family language
                   access, interpreter services, and language access gaps
                   across schools and districts.
                 </p>
-
                 <span>Open Dashboard →</span>
               </a>
 

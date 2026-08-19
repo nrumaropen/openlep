@@ -197,6 +197,62 @@ function Dashboard() {
     },
   ];
 
+    const complianceMapping = [
+    {
+      dataField: "Language Preference Identified",
+      requirement: "Title VI; 45 CFR §92.201",
+      rule: "LA-01 · LEP Assessment",
+      indicator: "LEP Identification Rate",
+      evidence:
+        "Demonstrates that the individual's language need was identified during the service encounter.",
+    },
+
+    {
+      dataField: "Qualified Interpreter Assigned",
+      requirement: "DOJ Title VI Guidance",
+      rule: "LA-02 · Interpreter Qualification",
+      indicator: "Qualified Interpreter Rate",
+      evidence:
+        "Demonstrates that language assistance was provided by a qualified interpreter.",
+    },
+
+    {
+      dataField: "Interpreter Response Time",
+      requirement: "45 CFR §92.201(c)",
+      rule: "LA-03 · Timely Language Assistance",
+      indicator: "Average Response Time",
+      evidence:
+        "Demonstrates that interpreter services were delivered within organizational response-time requirements.",
+    },
+
+    {
+      dataField: "Translated Vital Documents",
+      requirement: "Executive Order 13166",
+      rule: "LA-04 · Document Translation",
+      indicator: "Translation Compliance Rate",
+      evidence:
+        "Demonstrates that required translated documents were available when needed.",
+    },
+
+    {
+      dataField: "Complaint Resolution",
+      requirement: "Title VI Grievance Process",
+      rule: "LA-05 · Complaint Monitoring",
+      indicator: "Complaint Resolution Rate",
+      evidence:
+        "Demonstrates that complaints were documented and resolved according to policy.",
+    },
+
+    {
+      dataField: "Language Coverage Rate",
+      requirement: "Meaningful Access Standard",
+      rule: "LA-06 · Language Coverage",
+      indicator: "Language Coverage Score",
+      evidence:
+        "Demonstrates whether interpreter capacity is meeting observed language demand.",
+    },
+  ];
+
   return (
     <>
       <main className="dashboard">
@@ -520,7 +576,7 @@ function Dashboard() {
                     </div>
                   </div>
                 </div>
-
+                
                 <div className="compliance-items">
                   {complianceItems.map((item) => (
                     <div
@@ -528,13 +584,8 @@ function Dashboard() {
                       key={item.label}
                     >
                       <div>
-                        <span>
-                          {item.label}
-                        </span>
-
-                        <strong>
-                          {item.value}%
-                        </strong>
+                        <span>{item.label}</span>
+                        <strong>{item.value}%</strong>
                       </div>
 
                       <div className="compliance-track">
@@ -547,6 +598,52 @@ function Dashboard() {
                     </div>
                   ))}
                 </div>
+
+                <details className="compliance-breakdown">
+                  <summary>
+                    How this compliance score is calculated
+                  </summary>
+
+                  <div className="rules-engine">
+
+                    <div className="rules-header">
+                      <strong>Compliance Rules Engine</strong>
+                      <span>6 active rules</span>
+                    </div>
+
+                    <div className="rule pass">
+                      <span>✓</span>
+                      <p>Qualified interpreter provided within required response time.</p>
+                    </div>
+
+                    <div className="rule pass">
+                      <span>✓</span>
+                      <p>Required translated documents were available.</p>
+                    </div>
+
+                    <div className="rule pass">
+                      <span>✓</span>
+                      <p>Response time met organizational policy thresholds.</p>
+                    </div>
+
+                    <div className="rule pass">
+                      <span>✓</span>
+                      <p>Required documentation fields were completed.</p>
+                    </div>
+
+                    <div className="rule warning">
+                      <span>!</span>
+                      <p>Language coverage below target for Arabic services.</p>
+                    </div>
+
+                    <div className="rule pass">
+                      <span>✓</span>
+                      <p>Complaint resolution completed within required timeframe.</p>
+                    </div>
+
+                  </div>
+                </details>
+
               </article>
             </div>
 
@@ -759,6 +856,96 @@ function Dashboard() {
                 ))}
               </div>
             </article>
+
+              {/* =================================================
+                  COMPLIANCE REQUIREMENTS MAPPING
+              ================================================= */}
+
+              <section className="compliance-mapping">
+
+                <div className="panel-header">
+
+                  <div>
+
+                    <span className="panel-label">
+                      COMPLIANCE FRAMEWORK
+                    </span>
+
+                    <h2>
+                      Compliance Requirements Mapping
+                    </h2>
+
+                    <p>
+                      OpenLEP connects operational language-access
+                      data to specific legal obligations,
+                      compliance rules, dashboard indicators,
+                      and audit evidence.
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <div className="mapping-table">
+
+                  {/* Header */}
+
+                  <div className="mapping-header">
+
+                    <span>Operational Data</span>
+
+                    <span>Legal Requirement</span>
+
+                    <span>Compliance Rule</span>
+
+                    <span>Dashboard Indicator</span>
+
+                    <span>Evidence Produced</span>
+
+                  </div>
+
+                  {/* Rows */}
+
+                  {complianceMapping.map((item) => (
+
+                    <div
+                      key={item.rule}
+                      className="mapping-row"
+                    >
+
+                      <div>
+                        <strong>
+                          {item.dataField}
+                        </strong>
+                      </div>
+
+                      <div>
+                        {item.requirement}
+                      </div>
+
+                      <div>
+
+                        <span className="rule-badge">
+                          {item.rule}
+                        </span>
+
+                      </div>
+
+                      <div>
+                        {item.indicator}
+                      </div>
+
+                      <div className="mapping-evidence">
+                        {item.evidence}
+                      </div>
+
+                    </div>
+
+                  ))}
+
+                </div>
+
+              </section>
 
             {/* =================================================
                 AI INSIGHT

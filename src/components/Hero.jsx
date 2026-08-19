@@ -63,7 +63,7 @@ function Hero() {
               </span>
 
               <h2>
-                speak to everyone
+                every language, every service
               </h2>
 
             </div>
@@ -362,6 +362,10 @@ function Hero() {
                   Language Access
                 </strong>
 
+                <span>
+                  Figure out who you're serving and in what languages
+                </span>
+
               </div>
 
             </div>
@@ -388,6 +392,10 @@ function Hero() {
                   Compliance
                 </strong>
 
+                <span>
+                  Turn that baseline into accountable standards
+                </span>
+
               </div>
 
             </div>
@@ -413,6 +421,12 @@ function Hero() {
                 <strong>
                   Infrastructure
                 </strong>
+
+                <span>
+                  Make it durable instead of one-off
+                </span>
+
+                
 
               </div>
 

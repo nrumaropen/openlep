@@ -929,3 +929,252 @@
     column-gap: 10px;
   }
 }
+
+/* ==========================================================
+   COMPLIANCE RULES PANEL
+   ========================================================== */
+
+.compliance-rules-panel {
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  margin-top: 28px;
+
+}
+
+
+/* HEADER */
+
+.compliance-rules-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid var(--border);
+
+}
+
+
+.compliance-rules-label {
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: var(--primary);
+
+}
+
+
+.compliance-rules-header h2 {
+
+  margin: 8px 0;
+
+  font-size: 1.5rem;
+
+  color: var(--text);
+
+}
+
+
+.compliance-rules-header p {
+
+  margin: 0;
+
+  color: var(--muted);
+
+}
+
+
+/* SCORE */
+
+.compliance-score {
+
+  min-width: 120px;
+
+  text-align: center;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background: var(--surface-alt);
+
+}
+
+
+.compliance-score strong {
+
+  display: block;
+
+  font-size: 2rem;
+
+  color: var(--primary);
+
+}
+
+
+.compliance-score span {
+
+  font-size: 0.8rem;
+
+  color: var(--muted);
+
+}
+
+
+/* RULE LIST */
+
+.compliance-rules-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 22px;
+
+}
+
+
+/* INDIVIDUAL RULE */
+
+.compliance-rule {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  background: var(--surface-alt);
+
+}
+
+
+/* STATUS ICON */
+
+.compliance-rule-status {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+}
+
+
+/* PASS */
+
+.compliance-rule.pass 
+.compliance-rule-status {
+
+  background: #dff5e8;
+
+  color: #1c7c45;
+
+}
+
+
+/* FLAGGED */
+
+.compliance-rule.flagged 
+.compliance-rule-status {
+
+  background: #fff1d6;
+
+  color: #a66b00;
+
+}
+
+
+/* FAIL */
+
+.compliance-rule.fail 
+.compliance-rule-status {
+
+  background: #fde2e2;
+
+  color: #b42318;
+
+}
+
+
+/* TEXT */
+
+.compliance-rule-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+}
+
+
+.compliance-rule-content strong {
+
+  color: var(--text);
+
+  font-size: 0.95rem;
+
+}
+
+
+.compliance-rule-content span {
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .compliance-rules-header {
+
+    flex-direction: column;
+
+  }
+
+
+  .compliance-score {
+
+    width: 100%;
+
+  }
+
+}

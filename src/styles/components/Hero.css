@@ -1001,7 +1001,7 @@ font-size: 20px;
 
   color: #6e8875;
 
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 800;
 
   letter-spacing: 0.13em;
@@ -1013,6 +1013,7 @@ font-size: 20px;
   font-size: 13px;
   font-weight: 700;
 }
+
 
 .component-connector {
   position: relative;

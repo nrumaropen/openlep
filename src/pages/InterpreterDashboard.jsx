@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import ComplianceRulesPanel from "../components/ComplianceRulesPanel";
 
 function InterpreterDashboard() {
   const metrics = [
@@ -25,10 +26,10 @@ function InterpreterDashboard() {
       type: "positive",
     },
     {
-      label: "Unmet Requests",
+      label: "Unmet Requests (Period Total)",
       value: "764",
       change: "↑ 8.1%",
-      description: "requires attention",
+      description: "unfulfilled requests during reporting period",
       type: "negative",
     },
     {
@@ -90,7 +91,7 @@ function InterpreterDashboard() {
       value: 6,
     },
     {
-      label: "Unmet",
+      label: "Unmet (Current Snapshot)",
       value: 3,
     },
   ];
@@ -184,6 +185,29 @@ function InterpreterDashboard() {
         "Current interpreter capacity being utilized.",
       width: "84%",
       status: "Healthy utilization",
+    },
+  ];
+
+  const complianceRules = [
+    {
+      label: "Qualified interpreter utilization meets target",
+      status: "pass",
+      citation: "Title VI DOJ Guidance §III",
+    },
+    {
+      label: "Interpreter response time within operational threshold",
+      status: "pass",
+      citation: "Section 1557, 45 CFR §92.201(c)",
+    },
+    {
+      label: "High-demand language capacity requires review",
+      status: "flagged",
+      citation: "Title VI meaningful access requirement",
+    },
+    {
+      label: "Complaint resolution tracking complete",
+      status: "pass",
+      citation: "Title VI grievance procedure requirement",
     },
   ];
 
@@ -516,7 +540,7 @@ function InterpreterDashboard() {
                     </h2>
 
                     <p>
-                      Current request completion status.
+                      Current operational snapshot of request status.
                     </p>
                   </div>
 
@@ -809,6 +833,16 @@ function InterpreterDashboard() {
               </div>
 
             </article>
+
+          {/* =====================================================
+              COMPLIANCE RULES ENGINE
+          ===================================================== */}
+
+          <ComplianceRulesPanel
+            role="Interpreter Services"
+            score={91}
+            rules={complianceRules}
+          />
 
 
             {/* =================================================

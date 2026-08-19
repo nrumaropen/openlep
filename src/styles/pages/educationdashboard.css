@@ -1,264 +1,639 @@
 /* =========================================================
-   EDUCATION LANGUAGE ACCESS DASHBOARD
+   OPENLEP EDUCATION LANGUAGE ACCESS DASHBOARD
    ========================================================= */
 
+
 .education-dashboard {
-  min-height: 100vh;
-  background: #fbf8f6;
-  color: #342c2b;
+
+  min-height:100vh;
+  background:#fbf8f6;
+  color:#342c2b;
+
 }
 
+
 .education-container {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
+
+  width:min(1200px, calc(100% - 48px));
+  margin:0 auto;
+
 }
+
 
 
 /* =========================================================
    HERO
    ========================================================= */
 
+
 .education-hero {
-  padding: 78px 0 74px;
-  color: #ffffff;
-  background: linear-gradient(
+
+  padding:90px 0 85px;
+
+  background:
+  linear-gradient(
     135deg,
     #542b35 0%,
     #713b48 55%,
     #92515b 100%
   );
+
+  color:white;
+
 }
+
 
 .education-eyebrow {
-  margin: 0 0 18px;
-  color: #f3c9a8;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+
+  margin:0 0 18px;
+
+  color:#f3c9a8;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+
 }
+
 
 .education-hero h1 {
-  max-width: 800px;
-  margin: 0;
-  font-size: clamp(42px, 6vw, 68px);
-  line-height: 1;
-  letter-spacing: -0.045em;
+
+  max-width:850px;
+
+  margin:0;
+
+  font-size:clamp(42px,6vw,70px);
+
+  line-height:1;
+
+  letter-spacing:-.05em;
+
 }
+
 
 .education-hero h1 span {
-  color: #f3c9a8;
+
+  color:#f3c9a8;
+
 }
 
+
 .education-hero p {
-  max-width: 720px;
-  margin: 24px 0 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 18px;
-  line-height: 1.7;
+
+  max-width:760px;
+
+  margin-top:26px;
+
+  color:rgba(255,255,255,.85);
+
+  font-size:18px;
+
+  line-height:1.7;
+
 }
+
 
 
 /* =========================================================
    CONTENT
    ========================================================= */
 
+
 .education-section {
-  padding: 65px 0 90px;
+
+  padding:70px 0 100px;
+
 }
+
 
 
 /* =========================================================
    KPI CARDS
    ========================================================= */
 
+
 .education-kpis {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-bottom: 24px;
+
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:18px;
+
+  margin-bottom:28px;
+
 }
+
 
 .education-card {
-  padding: 24px;
-  border: 1px solid #eadfdc;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 5px 20px rgba(80, 45, 45, 0.05);
+
+  padding:25px;
+
+  background:white;
+
+  border:1px solid #eadfdc;
+
+  border-radius:16px;
+
+  box-shadow:
+  0 8px 25px rgba(80,45,45,.05);
+
 }
+
 
 .education-card h3 {
-  margin: 0 0 14px;
-  color: #756666;
-  font-size: 13px;
+
+  margin:0 0 14px;
+
+  color:#806f6c;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+
 }
+
 
 .education-card strong {
-  display: block;
-  color: #783f4d;
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: -0.04em;
+
+  display:block;
+
+  color:#783f4d;
+
+  font-size:36px;
+
+  line-height:1;
+
+  letter-spacing:-.04em;
+
 }
 
+
 .education-card p {
-  margin: 13px 0 0;
-  color: #786f6d;
-  font-size: 12px;
-  line-height: 1.6;
+
+  margin-top:14px;
+
+  color:#786f6d;
+
+  font-size:12px;
+
+  line-height:1.6;
+
 }
+
 
 
 /* =========================================================
    PANELS
    ========================================================= */
 
+
 .education-panel {
-  padding: 28px;
-  margin-bottom: 20px;
-  border: 1px solid #eadfdc;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 5px 20px rgba(80, 45, 45, 0.04);
+
+  padding:30px;
+
+  margin-bottom:22px;
+
+  background:white;
+
+  border:1px solid #eadfdc;
+
+  border-radius:16px;
+
+  box-shadow:
+  0 8px 25px rgba(80,45,45,.04);
+
 }
+
+
 
 .education-panel-heading {
-  margin-bottom: 26px;
+
+  margin-bottom:28px;
+
 }
+
 
 .education-panel-heading span {
-  display: block;
-  margin-bottom: 8px;
-  color: #a06452;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
+
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#a06452;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.16em;
+
 }
+
 
 .education-panel-heading h2 {
-  margin: 0;
-  color: #50343a;
-  font-size: 22px;
-  letter-spacing: -0.02em;
+
+  margin:0;
+
+  color:#50343a;
+
+  font-size:24px;
+
+  letter-spacing:-.03em;
+
 }
 
 
+
 /* =========================================================
-   LANGUAGE BARS
+   LANGUAGE DISTRIBUTION
    ========================================================= */
+
 
 .education-language-list {
-  display: flex;
-  flex-direction: column;
-  gap: 19px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
 }
+
+
 
 .education-language-row {
-  display: grid;
-  grid-template-columns: 150px 1fr 55px;
-  align-items: center;
-  gap: 18px;
-  color: #5f5655;
-  font-size: 13px;
+
+  display:grid;
+
+  grid-template-columns:160px 1fr 60px;
+
+  align-items:center;
+
+  gap:20px;
+
 }
+
+
+
+.education-language-row span {
+
+  color:#5f5655;
+
+  font-size:14px;
+
+}
+
 
 .education-language-row strong {
-  color: #503c40;
-  text-align: right;
+
+  text-align:right;
+
+  color:#50343a;
+
 }
+
+
 
 .education-bar {
-  height: 9px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #f1e9e6;
+
+  height:10px;
+
+  border-radius:999px;
+
+  overflow:hidden;
+
+  background:#f1e9e6;
+
 }
+
 
 .education-bar span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: #b86b5d;
+
+  display:block;
+
+  height:100%;
+
+  border-radius:inherit;
+
+  background:#b86b5d;
+
 }
 
 
+
 /* =========================================================
-   SCHOOL TABLE
+   REQUIREMENT → EVIDENCE TABLE
    ========================================================= */
+
 
 .education-table {
-  width: 100%;
+
+ width:100%;
+
 }
+
+
 
 .education-table-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid #f0e9e7;
-  color: #665c5a;
-  font-size: 13px;
+
+ display:grid;
+
+ grid-template-columns:2fr 2fr 1fr;
+
+ align-items:center;
+
+ gap:25px;
+
+ padding:16px 0;
+
+ border-bottom:1px solid #f0e9e7;
+
+ color:#665c5a;
+
+ font-size:13px;
+
 }
 
-.education-table-row:last-child {
-  border-bottom: none;
-}
+
 
 .education-table-header {
-  padding-top: 0;
-  color: #847876;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+
+ padding-top:0;
+
+ color:#847876;
+
+ font-size:10px;
+
+ font-weight:800;
+
+ text-transform:uppercase;
+
+ letter-spacing:.08em;
+
 }
 
+
+
 .education-table-row strong {
-  color: #9a6742;
+
+ color:#9a6742;
+
 }
+
 
 
 /* =========================================================
-   ACCESS GAPS
+   RISK MONITORING
    ========================================================= */
 
+
 .education-gap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:18px;
+
 }
+
+
 
 .education-gap-card {
-  padding: 21px;
-  border: 1px solid #eee3df;
-  border-radius: 10px;
-  background: #fcf7f5;
+
+ padding:24px;
+
+ background:#fcf7f5;
+
+ border:1px solid #eee3df;
+
+ border-radius:14px;
+
 }
+
+
 
 .education-gap-icon {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  margin-bottom: 18px;
-  border-radius: 8px;
-  background: #f0d8cf;
-  color: #7d4a43;
-  font-size: 10px;
-  font-weight: 800;
+
+ display:grid;
+
+ place-items:center;
+
+ width:38px;
+
+ height:38px;
+
+ margin-bottom:18px;
+
+ border-radius:10px;
+
+ background:#f0d8cf;
+
+ color:#7d4a43;
+
+ font-size:11px;
+
+ font-weight:800;
+
 }
+
+
 
 .education-gap-card h3 {
-  margin: 0 0 10px;
-  color: #563b3c;
-  font-size: 14px;
+
+ margin:0 0 12px;
+
+ color:#563b3c;
+
+ font-size:15px;
+
 }
 
+
+
 .education-gap-card p {
-  margin: 0;
-  color: #786d6b;
-  font-size: 12px;
-  line-height: 1.65;
+
+ margin:0;
+
+ color:#786d6b;
+
+ font-size:13px;
+
+ line-height:1.7;
+
+}
+
+
+
+/* =========================================================
+   OPENLEP AI INSIGHT
+   ========================================================= */
+
+.education-ai{
+
+    display:grid;
+    grid-template-columns:46px 1fr;
+    gap:22px;
+
+    margin-top:24px;
+
+    padding:30px;
+
+    background:#fff;
+
+    border:1px solid #eadfdc;
+
+    border-radius:14px;
+
+    box-shadow:0 5px 20px rgba(80,45,45,.04);
+
+}
+
+.education-ai-mark {
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #713b48;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+
+  box-shadow: 0 8px 20px rgba(84, 43, 53, .18);
+
+}
+
+
+.education-ai-content{
+
+  min-width:0;
+
+}
+
+
+.education-ai-heading{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+
+  margin-bottom:14px;
+
+}
+
+
+.education-section-label{
+
+  display:block;
+
+  margin-bottom:6px;
+
+  color:#a06452;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.16em;
+
+}
+
+
+.education-ai-heading h2{
+
+  margin:0;
+
+  color:#50343a;
+
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:-.025em;
+
+}
+
+
+.education-ai-live{
+
+  flex-shrink:0;
+
+  color:#92515b;
+
+  font-size:10px;
+  font-weight:700;
+
+}
+
+
+.education-ai-content > p{
+
+  max-width:850px;
+
+  margin:0 0 16px;
+
+  color:#6d6462;
+
+  font-size:14px;
+
+  line-height:1.75;
+
+}
+
+
+.education-ai-content > p strong{
+
+  color:#783f4d;
+
+}
+
+
+.education-recommendation{
+
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+
+  padding:14px 16px;
+
+  border-left:4px solid #b86b5d;
+
+  background:rgba(255,255,255,.75);
+
+  color:#6d6462;
+
+  font-size:12px;
+
+  line-height:1.7;
+
+}
+
+
+.education-recommendation strong{
+
+  color:#50343a;
+
+  white-space:nowrap;
+
+}
+
+
+.education-recommendation span{
+
+  flex:1;
+
 }
 
 
@@ -266,55 +641,61 @@
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 1000px) {
-  .education-kpis {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .education-gap-grid {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:1100px){
+
+
+.education-kpis{
+
+grid-template-columns:repeat(3,1fr);
+
 }
 
-@media (max-width: 700px) {
-  .education-container {
-    width: min(100% - 30px, 1180px);
-  }
 
-  .education-hero {
-    padding: 55px 0;
-  }
+.education-gap-grid{
 
-  .education-hero h1 {
-    font-size: 44px;
-  }
+grid-template-columns:1fr;
 
-  .education-hero p {
-    font-size: 16px;
-  }
+}
 
-  .education-section {
-    padding: 45px 0 65px;
-  }
 
-  .education-kpis {
-    grid-template-columns: 1fr;
-  }
+}
 
-  .education-panel {
-    padding: 21px;
-  }
 
-  .education-language-row {
-    grid-template-columns: 100px 1fr 45px;
-    gap: 10px;
-  }
 
-  .education-table {
-    min-width: 620px;
-  }
+@media(max-width:750px){
 
-  .education-panel:has(.education-table) {
-    overflow-x: auto;
-  }
+
+.education-container{
+
+width:calc(100% - 30px);
+
+}
+
+
+.education-kpis{
+
+grid-template-columns:1fr;
+
+}
+
+
+.education-panel{
+padding:22px;
+}
+
+.education-language-row{
+grid-template-columns:100px 1fr 45px;
+}
+
+.education-table{
+min-width:700px;
+}
+
+.education-panel:has(.education-table){
+overflow-x:auto;
+}
+.education-ai{
+flex-direction:column;
+}
 }
