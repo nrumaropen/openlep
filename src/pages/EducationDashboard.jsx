@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import ComplianceRulesPanel from "../components/ComplianceRulesPanel";
+
+import ComplianceRulesPanel from "../components/dashboard/ComplianceRulesPanel";
 
 const educationComplianceRules = [
   {
@@ -418,7 +418,7 @@ function EducationDashboard() {
           </div>
         </section>
       </main>
-      <Footer />
+
 
     </>
   );

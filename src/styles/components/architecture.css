@@ -65,6 +65,34 @@
   line-height: 1.75;
 }
 
+.detail-card summary span.status-tag {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: 3px 12px;
+  border: 1px solid #3b6b4f;
+  border-radius: 999px;
+  background: transparent;
+  color: #3b6b4f;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-note {
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid #3b6b4f;
+  background: #f4f8f5;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 /* Connector arrows */
 
 .architecture-card:not(:last-child)::after {

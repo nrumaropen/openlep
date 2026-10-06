@@ -1,27 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
-
 :root {
-  --background: #f5f6f2;
+
+  /* =========================================
+     OPENLEP BRAND
+  ========================================= */
+
+  --openlep-green: #39714c;
+  --openlep-green-dark: #18483d;
+  --openlep-green-light: #e9eeea;
+
+
+  /* =========================================
+     BACKGROUNDS
+  ========================================= */
+
+  --page-bg: #f4f7f6;
   --surface: #ffffff;
-  --surface-soft: #eef2ed;
-  --surface-dark: #142019;
+  --surface-muted: #f8faf9;
 
-  --text: #17211b;
-  --muted: #66716a;
-  --muted-dark: #4f5d55;
 
-  --accent: #4f7d5f;
-  --accent-dark: #365b43;
-  --accent-light: #dce8df;
+  /* =========================================
+     TEXT
+  ========================================= */
 
-  --border: #dce2dc;
-  --border-dark: #cbd4cc;
+  --text-primary: #1f2933;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
 
-  --warning: #b47b35;
-  --warning-light: #f5eadc;
 
-  --success: #3f7955;
+  /* =========================================
+     STATUS COLORS
+  ========================================= */
 
-  --font-body: "DM Sans", sans-serif;
-  --font-display: "Playfair Display", serif;
+  --success: #2e7d32;
+  --success-light: #e8f5e9;
+
+  --warning: #d97706;
+  --warning-light: #fff7ed;
+
+  --danger: #b91c1c;
+  --danger-light: #fef2f2;
+
+
+  /* =========================================
+     BORDERS
+  ========================================= */
+
+  --border: #e2e8f0;
+  --border-dark: #cbd5e1;
+
+
+  /* =========================================
+     DASHBOARD LAYOUT
+  ========================================= */
+
+  --container-width: 1200px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+
+  /* =========================================
+     SHADOWS
+  ========================================= */
+
+  --shadow-sm:
+    0 2px 8px rgba(0,0,0,0.05);
+
+  --shadow-md:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  --shadow-lg:
+    0 20px 50px rgba(0,0,0,0.12);
+
+
+  /* =========================================
+     SPACING
+  ========================================= */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+
 }

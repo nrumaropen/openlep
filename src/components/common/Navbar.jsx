@@ -1,5 +1,5 @@
-import "../styles/components/navbar.css";
-import logoOpenLEP from "../assets/logoopenlep.png";
+import "../../styles/components/navbar.css";
+import logoOpenLEP from "../../assets/images/logoopenlep.png";
 
 function Navbar() {
   const handleNavigation = () => {
@@ -42,6 +42,7 @@ function Navbar() {
           <a href="/openlep/#/architecture" onClick={handleNavigation}>
             Framework
           </a>
+
         </nav>
 
         <a

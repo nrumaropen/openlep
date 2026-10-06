@@ -1,0 +1,104 @@
+/* =========================================================
+   LANGUAGE DEMAND
+========================================================= */
+
+.demand-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.demand-row {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr) 62px 45px 48px;
+  align-items: center;
+  gap: 13px;
+
+  color: #465149;
+  font-size: 12px;
+}
+
+.demand-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+}
+
+.demand-bar {
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #edf1ed;
+}
+
+.demand-bar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent-dark),
+    var(--accent)
+  );
+
+  transition: width 0.6s ease;
+}
+
+.demand-row strong {
+  color: var(--text);
+  text-align: right;
+  font-size: 12px;
+}
+
+.demand-row small {
+  color: var(--muted);
+  text-align: right;
+  font-size: 10px;
+}
+
+.demand-change {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.demand-change.positive {
+  color: var(--accent);
+}
+
+.demand-change.negative {
+  color: var(--warning);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  .demand-row {
+    grid-template-columns: 78px minmax(0, 1fr) 48px;
+    gap: 9px;
+  }
+
+  .demand-row small,
+  .demand-change {
+    display: none;
+  }
+}

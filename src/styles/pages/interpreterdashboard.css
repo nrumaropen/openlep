@@ -395,20 +395,6 @@
   font-size: 11px;
 }
 
-.interpreter-chart-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 28px;
-  padding-top: 17px;
-  border-top: 1px solid #edf0f3;
-  color: #778493;
-  font-size: 12px;
-}
-
-.interpreter-chart-footer strong {
-  color: #263b4d;
-}
-
 /* =========================================================
    REQUEST STATUS
    ========================================================= */

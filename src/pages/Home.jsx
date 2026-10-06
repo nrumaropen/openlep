@@ -1,11 +1,10 @@
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
+import Hero from "../components/home/Hero";
 
 function Home() {
   return (
     <>
       <Hero />
-      <Footer />
+
     </>
   );
 }

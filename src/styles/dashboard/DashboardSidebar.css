@@ -1,0 +1,149 @@
+/* ==========================================================
+   DASHBOARD SIDEBAR
+========================================================== */
+
+.dashboard-sidebar {
+
+  position: sticky;
+
+  top: 110px;
+
+  align-self: start;
+
+  width: 260px;
+
+  height: fit-content;
+
+  padding: 28px;
+
+  border: 1px solid #e5ebe7;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,.05);
+
+}
+
+.sidebar-brand {
+
+  margin-bottom: 30px;
+
+}
+
+.sidebar-brand h2 {
+
+  margin: 0;
+
+  color: #356548;
+
+  font-size: 1.6rem;
+
+}
+
+.sidebar-brand span {
+
+  display: block;
+
+  margin-top: 8px;
+
+  color: #6a756f;
+
+  font-size: .85rem;
+
+}
+
+.sidebar-nav {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+}
+
+.sidebar-nav button {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: #46534c;
+
+  font-size: .95rem;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.sidebar-nav button:hover {
+
+  background: #edf5ef;
+
+  color: #356548;
+
+}
+
+.sidebar-icon {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: #edf5ef;
+
+  color: #356548;
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+}
+
+.sidebar-nav button.active {
+
+    background: #356548;
+
+    color: #ffffff;
+
+}
+
+.sidebar-nav button.active .sidebar-icon {
+
+    background: rgba(255,255,255,.15);
+
+    color: #ffffff;
+
+}
+
+.sidebar-nav button.active:hover {
+
+    background: #2d563d;
+
+}

@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-
 function Contact() {
   return (
     <>
@@ -325,7 +323,6 @@ function Contact() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

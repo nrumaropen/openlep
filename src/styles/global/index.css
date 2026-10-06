@@ -1,0 +1,53 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./layout.css";
+@import "./typography.css";
+@import "./utilities.css";
+
+
+/* =========================================================
+   COMPONENTS
+========================================================= */
+
+@import "../components/navbar.css";
+@import "../components/footer.css";
+@import "../components/Hero.css";
+@import "../components/architecture.css";
+@import "../components/LanguageMap.css";
+@import "../components/problem.css";
+
+
+/* =========================================================
+   PAGES
+========================================================= */
+
+@import "../pages/about.css";
+@import "../pages/docs.css";
+@import "../pages/contact.css";
+@import "../pages/dashboard.css";
+@import "../pages/exploredashboard.css";
+@import "../pages/interpreterdashboard.css";
+@import "../pages/hospitallanguageaccess.css";
+@import "../pages/educationdashboard.css";
+@import "../pages/compliance.css";
+@import "../pages/dmvdashboard.css";
+
+
+/* =========================================================
+   DASHBOARD COMPONENTS
+========================================================= */
+
+@import "../dashboard/DashboardMain.css";
+@import "../dashboard/ExecutiveSummary.css";
+@import "../dashboard/KPIGrid.css";
+@import "../dashboard/DemandChart.css";
+@import "../dashboard/CompliancePanel.css";
+@import "../dashboard/RiskPanel.css";
+@import "../dashboard/OrganizationTable.css";
+@import "../dashboard/AIInsightPanel.css";
+@import "../dashboard/ActivityFeed.css";
+@import "../dashboard/DashboardSidebar.css";

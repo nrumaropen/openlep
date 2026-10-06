@@ -1,0 +1,227 @@
+/* =========================================================
+   KPI GRID
+========================================================= */
+
+.dashboard-kpis {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+  margin: 36px 0;
+
+}
+
+
+/* =========================================================
+   KPI CARD
+========================================================= */
+
+.kpi-card {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 22px;
+
+  box-shadow: 0 14px 32px rgba(0,0,0,.05);
+
+  transition: .25s ease;
+
+  overflow: hidden;
+
+}
+
+.kpi-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.kpi-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 16px;
+
+}
+
+.kpi-top span:first-child {
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #738279;
+
+  line-height: 1.4;
+
+}
+
+.kpi-menu {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #f3f7f4;
+
+  color: #839188;
+
+  font-size: .9rem;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.kpi-menu:hover {
+
+  background: #3d7352;
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.kpi-card strong {
+
+  display: block;
+
+  font-size: 2.2rem;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: #18221c;
+
+}
+
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.kpi-card small {
+
+  display: block;
+
+  margin-top: auto;
+
+  color: #64736a;
+
+  font-size: .95rem;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   OPTIONAL ACCENT
+========================================================= */
+
+.kpi-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #3d7352,
+    #78a787
+  );
+
+  opacity: .9;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-kpis {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .dashboard-kpis {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+  .kpi-card {
+
+    padding: 24px;
+
+  }
+
+  .kpi-card strong {
+
+    font-size: 1.9rem;
+
+  }
+
+}

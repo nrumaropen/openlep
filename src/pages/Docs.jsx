@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 
 function Docs() {
   return (
@@ -319,7 +318,6 @@ function Docs() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

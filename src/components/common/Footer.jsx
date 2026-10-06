@@ -1,4 +1,3 @@
-
 function Footer() {
   return (
     <footer className="footer">
@@ -22,8 +21,8 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 OpenLEP | nisarpn | All Right Reserved</p>
-          <p>Open-source framework | speak to everyone </p>
+          <p>© 2026 OpenLEP | nisarpn | Released under the MIT License</p>
+          <p>Open-source framework | speak to everyone</p>
         </div>
       </div>
     </footer>
@@ -31,4 +30,3 @@ function Footer() {
 }
 
 export default Footer;
-

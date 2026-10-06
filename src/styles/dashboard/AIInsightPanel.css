@@ -1,0 +1,379 @@
+/* ==========================================================
+   AI PANEL
+========================================================== */
+
+.ai-panel{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:36px;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.ai-panel .panel-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:40px;
+
+}
+
+.ai-status{
+
+  width:150px;
+
+  height:150px;
+
+  border-radius:26px;
+
+  flex-shrink:0;
+
+  background:linear-gradient(
+    135deg,
+    #356548,
+    #4d7d5b
+  );
+
+  color:#fff;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.ai-status strong{
+
+  font-size:3rem;
+
+  line-height:1;
+
+}
+
+.ai-status span{
+
+  margin-top:10px;
+
+  font-size:.75rem;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+}
+
+
+/* ==========================================================
+   OVERVIEW
+========================================================== */
+
+.ai-overview{
+
+  display:grid;
+
+  grid-template-columns:2fr 1fr;
+
+  gap:24px;
+
+}
+
+.overview-card,
+
+.forecast-card{
+
+  padding:28px;
+
+  border-radius:20px;
+
+  border:1px solid #e5ebe7;
+
+  background:#fafcfb;
+
+}
+
+.overview-card h3,
+
+.forecast-card h3{
+
+  margin-bottom:14px;
+
+}
+
+.overview-card p,
+
+.forecast-card p{
+
+  color:#66766d;
+
+  line-height:1.8;
+
+}
+
+.forecast-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+.forecast-card button{
+
+  margin-top:auto;
+
+}
+
+
+/* ==========================================================
+   GROUPS
+========================================================== */
+
+.recommendation-group{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+}
+
+.group-title{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.group-title h3{
+
+  margin:0;
+
+}
+
+.group-title span{
+
+  font-size:.8rem;
+
+  text-transform:uppercase;
+
+  color:#6d7b74;
+
+  letter-spacing:.1em;
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.recommendation-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+  gap:22px;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.recommendation-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+  padding:24px;
+
+  border-radius:20px;
+
+  background:#fff;
+
+  border:1px solid #e4ece6;
+
+  transition:.25s;
+
+}
+
+.recommendation-card:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 16px 30px rgba(0,0,0,.06);
+
+}
+
+.recommendation-card.high{
+
+  border-top:5px solid #ca4747;
+
+}
+
+.recommendation-card.medium{
+
+  border-top:5px solid #d69b38;
+
+}
+
+.recommendation-card.low{
+
+  border-top:5px solid #3d7352;
+
+}
+
+.recommendation-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  align-items:flex-start;
+
+}
+
+.recommendation-top h4{
+
+  margin:0;
+
+  line-height:1.5;
+
+}
+
+.priority{
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+}
+
+.priority.high{
+
+  background:#fdeaea;
+
+  color:#be4242;
+
+}
+
+.priority.medium{
+
+  background:#fff4de;
+
+  color:#b77c1d;
+
+}
+
+.priority.low{
+
+  background:#e9f5ee;
+
+  color:#356548;
+
+}
+
+.recommendation-card p{
+
+  flex:1;
+
+  margin:0;
+
+  line-height:1.8;
+
+  color:#66766d;
+
+}
+
+.recommendation-card button,
+
+.forecast-card button{
+
+  align-self:flex-start;
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#356548;
+
+  color:#fff;
+
+  cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+  .ai-panel .panel-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .ai-overview{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+@media(max-width:700px){
+
+  .recommendation-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .ai-status{
+
+    width:120px;
+
+    height:120px;
+
+  }
+
+}

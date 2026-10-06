@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 
 function DataEvaluation() {
   return (
@@ -128,7 +127,7 @@ function DataEvaluation() {
         </section>
       </main>
 
-      <Footer />
+
     </>
   );
 }

@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-
 function About() {
   return (
     <>
@@ -157,7 +155,7 @@ function About() {
                 access remains.
               </p>
 
-            </div>
+            </div> 
 
 
             <div className="timeline">
@@ -631,7 +629,6 @@ function About() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

@@ -1,0 +1,388 @@
+/* =========================================================
+   COMPLIANCE OVERVIEW
+========================================================= */
+
+.compliance-overview {
+
+  display: grid;
+
+  grid-template-columns: 360px 1fr;
+
+  gap: 48px;
+
+  align-items: center;
+
+  margin: 42px 0;
+
+}
+
+
+/* =========================================================
+   COMPLIANCE CHART
+========================================================= */
+
+.compliance-chart {
+
+  position: relative;
+
+  width: 290px;
+
+  height: 290px;
+
+  margin: 0 auto;
+
+}
+
+.chart-center {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 170px;
+
+  height: 170px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 8px solid #f3f6f4;
+
+  box-shadow:
+    0 18px 40px rgba(25, 35, 28, .08),
+    inset 0 1px 0 rgba(255,255,255,.8);
+
+  z-index: 10;
+
+}
+
+.chart-center strong {
+
+  margin: 0;
+
+  font-size: 4.2rem;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #2f6645;
+
+}
+
+.chart-center span {
+
+  margin-top: 10px;
+
+  color: #55675d;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+  text-align: center;
+
+}
+
+.chart-center small {
+
+  margin-top: 12px;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(61,115,82,.12);
+
+  color: #2f6645;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+.compliance-metrics {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+}
+
+.metric-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 22px;
+
+  border: 1px solid #e4ece6;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  transition: all .25s ease;
+
+}
+
+.metric-row:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 14px 28px rgba(0,0,0,.05);
+
+}
+
+.metric-row span {
+
+  color: #66766d;
+
+  font-weight: 500;
+
+}
+
+.metric-row strong {
+
+  color: #2f6645;
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================================
+   RULES
+========================================================= */
+
+.rules-section {
+
+  margin-top: 44px;
+
+}
+
+.rules-section-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 24px;
+
+}
+
+.rules-section-header strong {
+
+  color: #18221c;
+
+  font-size: 1.1rem;
+
+}
+
+.rules-section-header span {
+
+  color: #66766d;
+
+  font-size: .82rem;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   RULE CARDS
+========================================================= */
+
+.rules-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+}
+
+.rule-card {
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+
+  padding: 22px;
+
+  border: 1px solid #e4ece6;
+
+  border-left: 5px solid #3d7352;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition: all .25s ease;
+
+}
+
+.rule-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 14px 28px rgba(0,0,0,.05);
+
+}
+
+.rule-card.warning {
+
+  border-left-color: #d69d39;
+
+}
+
+.rule-icon {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 44px;
+
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+}
+
+.rule-icon.pass {
+
+  background: rgba(61,115,82,.12);
+
+  color: #3d7352;
+
+}
+
+.rule-icon.warning {
+
+  background: rgba(214,157,57,.15);
+
+  color: #b78123;
+
+}
+
+.rule-card strong {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #18221c;
+
+}
+
+.rule-card p {
+
+  margin: 0;
+
+  color: #66766d;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .compliance-overview {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+  .rules-list {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .compliance-chart {
+
+    width: 240px;
+
+    height: 240px;
+
+  }
+
+  .chart-center {
+
+    width: 145px;
+
+    height: 145px;
+
+  }
+
+  .chart-center strong {
+
+    font-size: 3.2rem;
+
+  }
+
+  .metric-row {
+
+    padding: 16px 18px;
+
+  }
+
+}

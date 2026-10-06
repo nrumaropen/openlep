@@ -1,0 +1,282 @@
+/* =========================================================
+   DEMAND CHART
+========================================================= */
+
+.chart-metrics {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  margin: 32px 0;
+
+}
+
+.chart-metrics article {
+
+  padding: 22px;
+
+  background: #f8faf8;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 18px;
+
+  transition: .25s;
+
+}
+
+.chart-metrics article:hover {
+
+  border-color: #cfd9d2;
+
+  transform: translateY(-2px);
+
+}
+
+.chart-metrics span {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #74837a;
+
+}
+
+.chart-metrics strong {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  color: #18221c;
+
+}
+
+.chart-metrics small {
+
+  color: #66766d;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   CHART
+========================================================= */
+
+.chart-container {
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 24px;
+
+  box-shadow: 0 14px 34px rgba(0,0,0,.05);
+
+  overflow: hidden;
+
+}
+
+.recharts-wrapper {
+
+  font-size: .88rem;
+
+}
+
+.recharts-cartesian-grid line {
+
+  stroke: #edf2ee;
+
+}
+
+.recharts-tooltip-wrapper {
+
+  border-radius: 12px;
+
+}
+
+.recharts-default-tooltip {
+
+  border: none !important;
+
+  border-radius: 14px !important;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+  background: #ffffff !important;
+
+  padding: 14px 16px !important;
+
+}
+
+.recharts-legend-wrapper {
+
+  padding-top: 14px;
+
+}
+
+
+/* =========================================================
+   INSIGHT
+========================================================= */
+
+.chart-insight {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 32px;
+
+  margin-top: 28px;
+
+  padding: 28px;
+
+  border-radius: 22px;
+
+  border: 1px solid #e3ebe5;
+
+  background: linear-gradient(
+    135deg,
+    #f7faf7,
+    #ffffff
+  );
+
+}
+
+.chart-insight span {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: .8rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #3d7352;
+
+}
+
+.chart-insight p {
+
+  margin: 0;
+
+  max-width: 760px;
+
+  color: #66766d;
+
+  line-height: 1.8;
+
+}
+
+.chart-insight button {
+
+  flex-shrink: 0;
+
+  height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #3d7352;
+
+  color: #ffffff;
+
+  font-size: .9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.chart-insight button:hover {
+
+  background: #2f5f42;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1100px) {
+
+  .chart-metrics {
+
+    grid-template-columns: repeat(2,1fr);
+
+  }
+
+  .chart-insight {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .chart-metrics {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+  .chart-container {
+
+    padding: 18px;
+
+  }
+
+  .chart-insight {
+
+    padding: 22px;
+
+  }
+
+  .chart-insight button {
+
+    width: 100%;
+
+  }
+
+}

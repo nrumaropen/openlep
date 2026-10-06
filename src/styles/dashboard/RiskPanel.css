@@ -1,0 +1,399 @@
+/* =========================================================
+   RISK PANEL
+========================================================= */
+
+.risk-summary {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 130px;
+
+  width: 130px;
+
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #b86a35,
+    #d59a32
+  );
+
+  color: #ffffff;
+
+  box-shadow: 0 16px 34px rgba(213,154,50,.25);
+
+}
+
+.risk-summary strong {
+
+  font-size: 2rem;
+
+  line-height: 1;
+
+}
+
+.risk-summary span {
+
+  margin-top: 10px;
+
+  font-size: .78rem;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+}
+
+
+/* =========================================================
+   RISK LIST
+========================================================= */
+
+.risk-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+
+  margin: 36px 0;
+
+}
+
+
+/* =========================================================
+   RISK CARD
+========================================================= */
+
+.risk-card {
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.05);
+
+  transition: .25s;
+
+}
+
+.risk-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 18px 38px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.risk-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 24px;
+
+  margin-bottom: 18px;
+
+}
+
+.risk-top strong {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 1.05rem;
+
+  color: #18221c;
+
+}
+
+.risk-top span {
+
+  color: #74837a;
+
+  font-size: .88rem;
+
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.risk-level {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 92px;
+
+  height: 34px;
+
+  padding: 0 14px;
+
+  border-radius: 999px;
+
+  font-size: .76rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+}
+
+.risk-level.high {
+
+  background: rgba(196,75,75,.12);
+
+  color: #b63c3c;
+
+}
+
+.risk-level.medium {
+
+  background: rgba(213,154,50,.14);
+
+  color: #b67d1f;
+
+}
+
+.risk-level.low {
+
+  background: rgba(61,115,82,.12);
+
+  color: #3d7352;
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.risk-progress {
+
+  width: 100%;
+
+  height: 10px;
+
+  margin-bottom: 18px;
+
+  background: #edf2ee;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+}
+
+.risk-progress-fill {
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  transition: width .4s ease;
+
+}
+
+.risk-progress-fill.high {
+
+  background: #c44b4b;
+
+}
+
+.risk-progress-fill.medium {
+
+  background: #d59a32;
+
+}
+
+.risk-progress-fill.low {
+
+  background: #3d7352;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.risk-card p {
+
+  margin: 0;
+
+  color: #66766d;
+
+  line-height: 1.7;
+
+  font-size: .95rem;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.risk-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 32px;
+
+  margin-top: 34px;
+
+  padding: 28px;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #f8faf8,
+    #ffffff
+  );
+
+}
+
+.risk-footer strong {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #18221c;
+
+}
+
+.risk-footer p {
+
+  margin: 0;
+
+  max-width: 760px;
+
+  color: #66766d;
+
+  line-height: 1.8;
+
+}
+
+.risk-footer button {
+
+  flex-shrink: 0;
+
+  height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #3d7352;
+
+  color: #ffffff;
+
+  font-size: .9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.risk-footer button:hover {
+
+  background: #2f5f42;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .risk-footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .risk-top {
+
+    flex-direction: column;
+
+    gap: 14px;
+
+  }
+
+  .risk-summary {
+
+    width: 110px;
+
+    height: 110px;
+
+  }
+
+  .risk-summary strong {
+
+    font-size: 1.7rem;
+
+  }
+
+  .risk-footer {
+
+    padding: 22px;
+
+  }
+
+  .risk-footer button {
+
+    width: 100%;
+
+  }
+
+}

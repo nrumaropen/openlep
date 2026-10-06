@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 
 function LanguageAccessStandards() {
   return (
@@ -153,7 +152,6 @@ function LanguageAccessStandards() {
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }

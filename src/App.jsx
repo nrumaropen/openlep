@@ -1,20 +1,39 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Docs from "./pages/Docs";
 import Contact from "./pages/Contact";
-import ExploreDashboard from "./pages/ExploreDashboard";
+
 import Dashboard from "./pages/Dashboard";
+import ExploreDashboard from "./pages/ExploreDashboard";
 import InterpreterDashboard from "./pages/InterpreterDashboard";
-import LanguageAccessStandards from "./pages/LanguageAccessStandards";
 import HospitalLanguageAccess from "./pages/HospitalLanguageAccess";
 import EducationDashboard from "./pages/EducationDashboard";
-import Compliance from "./pages/Compliance";
 import DMVDashboard from "./pages/DMVDashboard";
+
+import LanguageAccessStandards from "./pages/LanguageAccessStandards";
 import DataEvaluation from "./pages/DataEvaluation";
-import Architecture from "./components/Architecture";
-import Navbar from "./components/Navbar";
+
+const routes = {
+  "/": Home,
+
+  "/about": About,
+  "/docs": Docs,
+  "/contact": Contact,
+
+  "/dashboard": Dashboard,
+  "/exploredashboard": ExploreDashboard,
+  "/interpreter-dashboard": InterpreterDashboard,
+  "/hospital-language-access": HospitalLanguageAccess,
+  "/education": EducationDashboard,
+  "/dmvdashboard": DMVDashboard,
+  "/language-access-standards": LanguageAccessStandards,
+  "/data-evaluation": DataEvaluation,
+};
 
 function App() {
   const [route, setRoute] = useState(
@@ -23,9 +42,7 @@ function App() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      setRoute(
-        window.location.hash.replace(/^#/, "") || "/"
-      );
+      setRoute(window.location.hash.replace(/^#/, "") || "/");
     };
 
     window.addEventListener("hashchange", handleHashChange);
@@ -35,60 +52,17 @@ function App() {
     };
   }, []);
 
-  const renderPage = () => {
-    switch (route) {
-      case "/about":
-        return <About />;
-
-      case "/docs":
-        return <Docs />;
-
-      case "/contact":
-        return <Contact />;
-
-      case "/dashboard":
-        return <Dashboard />;
-
-      case "/exploredashboard":
-        return <ExploreDashboard />;
-
-      case "/interpreter-dashboard":
-        return <InterpreterDashboard />;
-
-      case "/hospital-language-access":
-        return <HospitalLanguageAccess />;
-
-      case "/education":
-        return <EducationDashboard />;
-
-      case "/compliance":
-        return <Compliance />;
-
-      case "/dmvdashboard":
-        return <DMVDashboard />;
-
-      case "/architecture":
-        return <Architecture />;
-
-      case "/language-access-standards":
-        return <LanguageAccessStandards />;
-
-      case "/data-evaluation":
-        return <DataEvaluation />;
-
-      case "/":
-      default:
-        return <Home />;
-    }
-  };
+  const CurrentPage = routes[route] || Home;
 
   return (
     <>
       <Navbar />
 
       <main>
-        {renderPage()}
+        <CurrentPage />
       </main>
+
+      <Footer />
     </>
   );
 }

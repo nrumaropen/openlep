@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 
 function ExploreDashboard() {
   return (
@@ -101,7 +100,7 @@ function ExploreDashboard() {
 
       </main>
 
-      <Footer />
+
     </>
   );
 }

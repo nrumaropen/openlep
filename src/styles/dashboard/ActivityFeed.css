@@ -1,0 +1,374 @@
+/* =========================================================
+   ACTIVITY STATUS
+========================================================= */
+
+.activity-status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(61,115,82,.08);
+
+  color: #3d7352;
+
+  font-size: .84rem;
+
+  font-weight: 600;
+
+}
+
+.status-dot {
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #3d7352;
+
+  animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+
+  0% {
+
+    transform: scale(.9);
+
+    opacity: .5;
+
+  }
+
+  50% {
+
+    transform: scale(1.3);
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    transform: scale(.9);
+
+    opacity: .5;
+
+  }
+
+}
+
+
+/* =========================================================
+   ACTIVITY FEED
+========================================================= */
+
+.activity-feed {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-top: 32px;
+
+}
+
+
+/* =========================================================
+   ACTIVITY CARD
+========================================================= */
+
+.activity-card {
+
+  display: grid;
+
+  grid-template-columns: 90px 1fr 12px;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 22px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4ece6;
+
+  border-radius: 20px;
+
+  transition: .25s;
+
+}
+
+.activity-card:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.activity-time {
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+  color: #3d7352;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.activity-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+}
+
+.activity-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 18px;
+
+}
+
+.activity-header strong {
+
+  color: #18221c;
+
+  font-size: 1rem;
+
+}
+
+.activity-header span {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  background: #f3f6f4;
+
+  color: #66766d;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .06em;
+
+}
+
+.activity-content p {
+
+  margin: 0;
+
+  color: #66766d;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   INDICATOR
+========================================================= */
+
+.activity-indicator {
+
+  width: 10px;
+
+  height: 100%;
+
+  border-radius: 999px;
+
+}
+
+.activity-indicator.success {
+
+  background: #3d7352;
+
+}
+
+.activity-indicator.warning {
+
+  background: #d69d39;
+
+}
+
+.activity-indicator.critical {
+
+  background: #c44b4b;
+
+}
+
+.activity-indicator.information {
+
+  background: #4b7bc4;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.activity-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 34px;
+
+  padding: 28px;
+
+  border: 1px solid #e4ece6;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #f8faf8,
+    #ffffff
+  );
+
+}
+
+.activity-footer strong {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #18221c;
+
+}
+
+.activity-footer p {
+
+  margin: 0;
+
+  max-width: 700px;
+
+  color: #66766d;
+
+  line-height: 1.8;
+
+}
+
+.activity-footer button {
+
+  height: 46px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #3d7352;
+
+  color: #ffffff;
+
+  font-size: .9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.activity-footer button:hover {
+
+  background: #2f5f42;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .activity-card {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+  .activity-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .activity-indicator {
+
+    width: 100%;
+
+    height: 8px;
+
+  }
+
+  .activity-footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .activity-footer button {
+
+    width: 100%;
+
+  }
+
+}

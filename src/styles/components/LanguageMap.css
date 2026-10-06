@@ -393,33 +393,6 @@
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.language-map-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 15px;
-
-  margin-top: 7px;
-
-  color: #7b877f;
-
-  font-size: 7px;
-}
-
-
-.language-map-footer span:last-child {
-  color: #39714c;
-
-  font-weight: 700;
-}
-
 
 /* =========================================================
    TABLET
