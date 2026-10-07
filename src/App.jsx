@@ -18,12 +18,15 @@ import DMVDashboard from "./pages/DMVDashboard";
 import LanguageAccessStandards from "./pages/LanguageAccessStandards";
 import DataEvaluation from "./pages/DataEvaluation";
 
+import Architecture from "./components/architecture/Architecture";
+
 const routes = {
   "/": Home,
 
   "/about": About,
   "/docs": Docs,
   "/contact": Contact,
+  "/architecture": Architecture,
 
   "/dashboard": Dashboard,
   "/exploredashboard": ExploreDashboard,
@@ -31,6 +34,7 @@ const routes = {
   "/hospital-language-access": HospitalLanguageAccess,
   "/education": EducationDashboard,
   "/dmvdashboard": DMVDashboard,
+
   "/language-access-standards": LanguageAccessStandards,
   "/data-evaluation": DataEvaluation,
 };
@@ -43,6 +47,12 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       setRoute(window.location.hash.replace(/^#/, "") || "/");
+
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
     };
 
     window.addEventListener("hashchange", handleHashChange);

@@ -3,26 +3,22 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-main">
-          <div className="footer-brand">
-            <a href="/" className="footer-logo">
-              OpenLEP
-            </a>
-
-            <p>
-              Open Language Access Compliance Infrastructure.
-            </p>
-          </div>
 
           <div className="footer-links">
-            <a href="#problem">Problem</a>
-            <a href="#architecture">Architecture</a>
-            <a href="/docs">Documentation</a>
+            <a href="#problem">LinkedIn</a>
+            <a href="#architecture">GitHub</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 OpenLEP | nisarpn | Released under the MIT License</p>
-          <p>Open-source framework | speak to everyone</p>
+          <p>
+            © 2026 OpenLEP | nisarpn | Released under the MIT License
+            <br />
+            OpenLEP is an open-source AI-driven language access compliance platform
+            designed to support public institutions in improving services for
+            individuals with limited English proficiency (LEP).
+          </p>
         </div>
       </div>
     </footer>
