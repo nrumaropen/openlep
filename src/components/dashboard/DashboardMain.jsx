@@ -93,7 +93,7 @@ function DashboardMain({
 
                 <strong>
 
-                  Live Database
+                  Live Database (sample data)
 
                 </strong>
 
@@ -101,7 +101,7 @@ function DashboardMain({
 
               <span>
 
-                Connected to OpenLEP cloud infrastructure
+                Sample institutions.
 
               </span>
 
@@ -291,7 +291,7 @@ function DashboardMain({
 
               <small>
 
-                Connected to OpenLEP
+                Sample institutions
 
               </small>
 
@@ -345,19 +345,19 @@ function DashboardMain({
 
               <span>
 
-                AI Monitoring
+                AI analytics:
 
               </span>
 
               <strong>
 
-                Enabled
+                Planned
 
               </strong>
 
               <small>
 
-                Forecast engine online
+                (roadmap)
 
               </small>
 

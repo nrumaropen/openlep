@@ -24,7 +24,7 @@ function ActivityFeed() {
 
       type: "warning",
 
-      title: "Institution D Below Compliance Target",
+      title: "Dallas Regional Hospital Below Compliance Target",
 
       description:
 
@@ -76,7 +76,7 @@ function ActivityFeed() {
 
       description:
 
-        "AI forecasting models generated updated demand projections.",
+        "Demand projections updated using the current dataset",
 
       category: "Forecast",
 
@@ -138,7 +138,7 @@ function ActivityFeed() {
 
           <span>
 
-            Live Updates
+            Recent Activity
 
           </span>
 
@@ -221,7 +221,7 @@ function ActivityFeed() {
             OpenLEP continues monitoring language
             demand, interpreter utilization,
             compliance indicators, and operational
-            performance in real time.
+            performance across the sample dataset.
 
           </p>
 

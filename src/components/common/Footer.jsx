@@ -15,9 +15,9 @@ function Footer() {
           <p>
             © 2026 OpenLEP | nisarpn | Released under the MIT License
             <br />
-            OpenLEP is an open-source AI-driven language access compliance platform
-            designed to support public institutions in improving services for
-            individuals with limited English proficiency (LEP).
+            OpenLEP is an open-source language access compliance platform 
+            with planned AI-assisted analytics designed to support public institutions 
+            serving individuals with limited English proficiency (LEP).
           </p>
         </div>
       </div>

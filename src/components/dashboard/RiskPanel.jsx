@@ -94,7 +94,7 @@ function RiskPanel() {
           <p>
 
             Current operational risks identified through
-            OpenLEP monitoring and predictive analysis.
+            OpenLEP monitoring and trend analysis.
 
           </p>
 
@@ -104,7 +104,7 @@ function RiskPanel() {
 
           <strong>
 
-            2
+            1
 
           </strong>
 

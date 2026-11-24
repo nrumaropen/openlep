@@ -1,5 +1,4 @@
 import {
-
   ResponsiveContainer,
   AreaChart,
   Area,
@@ -10,321 +9,178 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
-
 } from "recharts";
 
 function DemandChart({
-
-  requests = []
-
+  requests = [],
+  requestStats,
 }) {
-
-  const demoData = [
-
-    {
-
-      month: "Jan",
-
-      requests: 8650,
-
-      forecast: null,
-
-      compliance: 79,
-
-    },
-
-    {
-
-      month: "Feb",
-
-      requests: 9020,
-
-      forecast: null,
-
-      compliance: 80,
-
-    },
-
-    {
-
-      month: "Mar",
-
-      requests: 9410,
-
-      forecast: null,
-
-      compliance: 82,
-
-    },
-
-    {
-
-      month: "Apr",
-
-      requests: 9980,
-
-      forecast: null,
-
-      compliance: 84,
-
-    },
-
-    {
-
-      month: "May",
-
-      requests: 10940,
-
-      forecast: null,
-
-      compliance: 86,
-
-    },
-
-    {
-
-      month: "Jun",
-
-      requests: 12486,
-
-      forecast: 12486,
-
-      compliance: 87,
-
-    },
-
-    {
-
-      month: "Jul",
-
-      requests: null,
-
-      forecast: 13780,
-
-      compliance: null,
-
-    },
-
-    {
-
-      month: "Aug",
-
-      requests: null,
-
-      forecast: 14520,
-
-      compliance: null,
-
-    }
-
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
-  const chartData =
+  const chartData = Object.values(
+    requests.reduce((acc, request) => {
+      const date = new Date(request.request_date);
+      const month = monthNames[date.getMonth()];
 
-    requests.length > 0
+      if (!acc[month]) {
+        acc[month] = {
+          month,
+          requests: 0,
+        };
+      }
 
-      ? requests
+      acc[month].requests += 1;
 
-      : demoData;
+      return acc;
+    }, {})
+  )
+    .map((item) => ({
+      ...item,
+      forecast: Math.round(item.requests * 1.11),
+    }))
+    .sort(
+      (a, b) =>
+        monthNames.indexOf(a.month) -
+        monthNames.indexOf(b.month)
+    );
+
+  const forecast =
+    chartData.length > 0
+      ? chartData[chartData.length - 1].forecast
+      : 0;
 
   return (
-
-    <section 
+    <section
       id="demand"
-      className="dashboard-panel">
-
+      className="dashboard-panel"
+    >
       <div className="panel-header">
-
         <div>
-
           <span className="panel-label">
-
             DEMAND ANALYTICS
-
           </span>
 
           <h2>
-
             Language Access Demand
-
           </h2>
 
           <p>
-
             Historical interpreter demand,
-            projected utilization, and enterprise
-            compliance performance.
-
+            projected utilization, and
+            enterprise language-access
+            performance.
           </p>
-
         </div>
 
         <div className="panel-summary">
-
           <strong>
-
-            12,486
-
+            {requestStats.total}
           </strong>
 
           <span>
-
             Requests This Period
-
           </span>
-
         </div>
-
       </div>
 
       <div className="chart-metrics">
-
         <article>
-
           <span>
-
             Current Demand
-
           </span>
 
           <strong>
-
-            12,486
-
+            {requestStats.total}
           </strong>
 
           <small>
-
             Interpreter Requests
-
           </small>
-
         </article>
 
         <article>
-
           <span>
-
             Forecast
-
           </span>
 
           <strong>
-
-            13,780
-
+            {forecast}
           </strong>
 
           <small>
-
-            Next 30 Days
-
+            Projected Requests (sample)
           </small>
-
         </article>
 
         <article>
-
           <span>
-
-            Compliance
-
+            Fulfilled Requests
           </span>
 
           <strong>
-
-            87%
-
+            {requestStats.fulfillmentRate}%
           </strong>
 
           <small>
-
-            Current Performance
-
+            Successfully Completed
           </small>
-
         </article>
 
         <article>
-
           <span>
-
-            Confidence
-
+            Qualified Interpreters
           </span>
 
           <strong>
-
-            91%
-
+            {requestStats.qualified}
           </strong>
 
           <small>
-
-            AI Prediction
-
+            Qualified Interpreter Used
           </small>
-
         </article>
-
       </div>
 
       <div className="chart-container">
-
         <ResponsiveContainer
-
           width="100%"
-
           height={430}
-
         >
-
           <AreaChart
-
             data={chartData}
-
             margin={{
-
               top: 25,
-
               right: 20,
-
               left: 5,
-
               bottom: 5,
-
             }}
-
           >
+            <CartesianGrid strokeDasharray="4 4" />
 
-            <CartesianGrid
-
-              strokeDasharray="4 4"
-
-            />
-
-            <XAxis
-
-              dataKey="month"
-
-            />
+            <XAxis dataKey="month" />
 
             <YAxis
-
               yAxisId="requests"
-
-              domain={[8000, 15000]}
-
+              allowDecimals={false}
             />
 
             <YAxis
-
-              yAxisId="compliance"
-
+              yAxisId="forecast"
               orientation="right"
-
-              domain={[70, 100]}
-
+              allowDecimals={false}
             />
 
             <Tooltip />
@@ -332,111 +188,65 @@ function DemandChart({
             <Legend />
 
             <ReferenceLine
-
-              yAxisId="compliance"
-
-              y={85}
-
+              yAxisId="forecast"
+              y={forecast}
               stroke="#c79335"
-
               strokeDasharray="6 6"
-
-              label="Target"
-
+              label="Forecast"
             />
 
             <Area
-
               yAxisId="requests"
-
               type="monotone"
-
               dataKey="requests"
-
-              name="Actual Requests"
-
+              name="Requests"
               stroke="#3d7352"
-
               fill="#dfeade"
-
               strokeWidth={3}
-
             />
 
             <Line
-
-              yAxisId="requests"
-
+              yAxisId="forecast"
               type="monotone"
-
               dataKey="forecast"
-
               name="Forecast"
-
               stroke="#3d7352"
-
               strokeWidth={3}
-
               strokeDasharray="8 5"
-
             />
-
-            <Line
-
-              yAxisId="compliance"
-
-              type="monotone"
-
-              dataKey="compliance"
-
-              name="Compliance"
-
-              stroke="#8b9388"
-
-              strokeWidth={3}
-
-            />
-
           </AreaChart>
-
         </ResponsiveContainer>
-
       </div>
 
       <div className="chart-insight">
-
         <div>
-
           <span>
-
             OPENLEP INSIGHT
-
           </span>
 
           <p>
-
-            Interpreter demand continues to increase
-            while compliance performance remains
-            stable. Current forecasting models predict
-            an additional 11% increase in demand over
-            the next reporting period.
-
+            OpenLEP analyzed{" "}
+            <strong>
+              {requestStats.total}
+            </strong>{" "}
+            interpreter requests. Overall
+            fulfillment reached{" "}
+            <strong>
+              {requestStats.fulfillmentRate}%
+            </strong>
+            . Current forecasting indicates
+            continued growth in interpreter
+            demand based on recent request
+            patterns.
           </p>
-
         </div>
 
         <button>
-
           View Full Analysis
-
         </button>
-
       </div>
-
     </section>
-
   );
-
 }
 
 export default DemandChart;

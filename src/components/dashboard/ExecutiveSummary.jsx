@@ -6,7 +6,7 @@ function ExecutiveSummary() {
 
       title: "Overall Compliance",
 
-      value: "87%",
+      value: "90.6%",
 
       trend: "+3%",
 
@@ -36,7 +36,7 @@ function ExecutiveSummary() {
 
       title: "Highest Risk",
 
-      value: "The Global Insitute for Linguistic",
+      value: "Dallas Regional Hospital",
 
       trend: "Review",
 
@@ -49,7 +49,7 @@ function ExecutiveSummary() {
 
     {
 
-      title: "AI Forecast",
+      title: "Projected Compliance (sample)",
 
       value: "89%",
 

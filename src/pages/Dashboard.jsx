@@ -1,4 +1,5 @@
 import { useDashboardData } from "../hooks/useDashboardData";
+import { getRequestStats } from "../utils/requestStats";
 
 import DashboardSidebar from "../components/dashboard/DashboardSidebar";
 import DashboardMain from "../components/dashboard/DashboardMain";
@@ -14,6 +15,7 @@ import ActivityFeed from "../components/dashboard/ActivityFeed";
 function Dashboard() {
 
   const {
+
     organizations = [],
     requests = [],
     languages = [],
@@ -22,6 +24,7 @@ function Dashboard() {
     complaints = [],
     loading,
     error,
+
   } = useDashboardData();
 
   if (loading) {
@@ -62,30 +65,84 @@ function Dashboard() {
 
   }
 
+  const averageCompliance =
+
+    complianceScores.length > 0
+
+      ? Math.round(
+
+          complianceScores.reduce(
+
+            (total, score) =>
+
+              total + score.overall_score,
+
+            0
+
+          ) / complianceScores.length
+
+        )
+
+      : 0;
+
+  const requestStats = getRequestStats(requests);
+
   const metrics = [
 
     {
+
       label: "Interpreter Requests",
-      value: "12,486",
+
+      value: requestStats.total.toLocaleString(),
+
       detail: "Current reporting period",
+
+      icon: "↗",
+
+      status: "positive",
+
     },
 
     {
+
       label: "Compliance Score",
-      value: "87%",
+
+      value: `${averageCompliance}%`,
+
       detail: "Enterprise average",
+
+      icon: "✓",
+
+      status: "positive",
+
     },
 
     {
+
       label: "Languages Supported",
-      value: "47",
+
+      value: languages.length.toString(),
+
       detail: "Active language services",
+
+      icon: "🌐",
+
+      status: "neutral",
+
     },
 
     {
+
       label: "Organizations",
-      value: organizations.length || "--",
+
+      value: organizations.length.toString(),
+
       detail: "Participating institutions",
+
+      icon: "🏢",
+
+      status: "neutral",
+
     },
 
   ];
@@ -99,46 +156,72 @@ function Dashboard() {
       <section className="dashboard-content">
 
         <DashboardMain
+
           organizations={organizations}
           languages={languages}
+
         />
 
         <div className="dashboard-container">
 
-          <ExecutiveSummary />
+          <ExecutiveSummary
+
+            organizations={organizations}
+            requests={requests}
+            complianceScores={complianceScores}
+            requestStats={requestStats}
+
+          />
 
           <KPIGrid
+
             metrics={metrics}
+
           />
 
           <DemandChart
+
             requests={requests}
+            requestStats={requestStats}
+
           />
 
           <CompliancePanel
+
             complianceScores={complianceScores}
             complianceRules={complianceRules}
+            requestStats={requestStats}
+
           />
 
           <OrganizationTable
+
             organizations={organizations}
             complianceScores={complianceScores}
+
           />
 
           <RiskPanel
+
             requests={requests}
             complaints={complaints}
+
           />
 
           <AIInsightPanel
+
             requests={requests}
             organizations={organizations}
             complianceScores={complianceScores}
+            requestStats={requestStats}
+
           />
 
           <ActivityFeed
+
             requests={requests}
             complaints={complaints}
+
           />
 
         </div>

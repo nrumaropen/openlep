@@ -1,4 +1,26 @@
-function AIInsightPanel() {
+function AIInsightPanel({
+  organizations = [],
+  complianceScores = [],
+  requestStats,
+}) {
+
+  const lowestOrganization =
+    complianceScores.length > 0
+      ? complianceScores.reduce((lowest, current) =>
+          current.overall_score < lowest.overall_score
+            ? current
+            : lowest
+        )
+      : null;
+
+  const organizationName =
+    lowestOrganization
+      ? organizations.find(
+          (organization) =>
+            organization.id ===
+            lowestOrganization.organization_id
+        )?.name
+      : "No organization";
 
   const insights = [
 
@@ -6,23 +28,23 @@ function AIInsightPanel() {
       priority: "high",
       title: "Increase Spanish Interpreter Capacity",
       description:
-        "Spanish interpreter requests increased by 24% during the current reporting period, creating sustained pressure on available resources.",
+        "Interpreter demand remains highest for Spanish language services and should continue to be monitored as request volumes increase.",
       impact: "High",
     },
 
     {
       priority: "high",
-      title: "Review Institution D",
+      title: organizationName,
       description:
-        "Operational performance remains below the recommended compliance threshold across multiple language-access indicators.",
+        "This organization currently has the lowest overall compliance score and should be prioritized for operational review.",
       impact: "High",
     },
 
     {
       priority: "medium",
-      title: "Expand Arabic Coverage",
+      title: "Monitor Response Time",
       description:
-        "Projected demand indicates additional Arabic interpreter capacity may be required within the next reporting cycle.",
+        "Continue improving interpreter response times to support timely language access services.",
       impact: "Medium",
     },
 
@@ -30,18 +52,18 @@ function AIInsightPanel() {
       priority: "low",
       title: "Maintain Documentation Quality",
       description:
-        "Documentation compliance remains strong and should continue under current operational procedures.",
+        "Documentation practices remain consistent and should continue under current operational procedures.",
       impact: "Low",
     },
 
   ];
 
   const high = insights.filter(
-    item => item.priority === "high"
+    (item) => item.priority === "high"
   );
 
   const other = insights.filter(
-    item => item.priority !== "high"
+    (item) => item.priority !== "high"
   );
 
   return (
@@ -56,31 +78,23 @@ function AIInsightPanel() {
         <div>
 
           <span className="panel-label">
-            OPENLEP INTELLIGENCE
+            OPENLEP INSIGHTS
           </span>
 
           <h2>
-            AI Operational Analysis
+            Operational Analysis
           </h2>
 
           <p>
-            AI-generated recommendations based on enterprise
-            language-access performance, compliance indicators,
-            and operational trends.
+            OpenLEP recommendations generated from
+            language-access performance,
+            interpreter utilization,
+            and compliance indicators.
           </p>
 
         </div>
 
-        <div className="ai-status">
-
-          <strong>91%</strong>
-
-          <span>Confidence</span>
-
-        </div>
-
       </div>
-
 
       <section className="ai-overview">
 
@@ -92,11 +106,20 @@ function AIInsightPanel() {
 
           <p>
 
-            Current language-access operations remain stable
-            across participating organizations. Interpreter
-            demand continues increasing, particularly for
-            Spanish language services, while enterprise
-            compliance remains above target performance.
+            OpenLEP analyzed{" "}
+            <strong>
+              {requestStats.total}
+            </strong>{" "}
+            interpreter requests.
+            Overall fulfillment reached{" "}
+            <strong>
+              {requestStats.fulfillmentRate}%
+            </strong>
+            . Participating organizations continue
+            to demonstrate generally stable
+            language-access performance while
+            several operational areas should
+            continue to be monitored.
 
           </p>
 
@@ -105,15 +128,15 @@ function AIInsightPanel() {
         <div className="forecast-card">
 
           <h3>
-            Forecast
+            Operational Outlook
           </h3>
 
           <p>
 
-            Enterprise compliance is projected to remain
-            above <strong>89%</strong> during the next
-            reporting period if recommended actions are
-            implemented.
+            Based on the current sample dataset,
+            language-access demand is expected to
+            continue increasing during the next
+            reporting period.
 
           </p>
 
@@ -127,24 +150,27 @@ function AIInsightPanel() {
 
       </section>
 
-
       <section className="recommendation-group">
 
         <div className="group-title">
 
           <h3>
+
             High Priority Recommendations
+
           </h3>
 
           <span>
+
             Immediate Action
+
           </span>
 
         </div>
 
         <div className="recommendation-grid">
 
-          {high.map((item)=>(
+          {high.map((item) => (
 
             <article
               key={item.title}
@@ -159,7 +185,9 @@ function AIInsightPanel() {
 
                 </h4>
 
-                <span className={`priority ${item.priority}`}>
+                <span
+                  className={`priority ${item.priority}`}
+                >
 
                   {item.impact}
 
@@ -187,24 +215,27 @@ function AIInsightPanel() {
 
       </section>
 
-
       <section className="recommendation-group">
 
         <div className="group-title">
 
           <h3>
+
             Additional Recommendations
+
           </h3>
 
           <span>
+
             Continuous Improvement
+
           </span>
 
         </div>
 
         <div className="recommendation-grid">
 
-          {other.map((item)=>(
+          {other.map((item) => (
 
             <article
               key={item.title}
@@ -219,7 +250,9 @@ function AIInsightPanel() {
 
                 </h4>
 
-                <span className={`priority ${item.priority}`}>
+                <span
+                  className={`priority ${item.priority}`}
+                >
 
                   {item.impact}
 

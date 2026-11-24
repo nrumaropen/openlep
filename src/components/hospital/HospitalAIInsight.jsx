@@ -15,7 +15,7 @@ function HospitalAIInsight() {
 
 
         <span>
-          AI OPERATIONAL ANALYSIS
+          OPERATIONAL ANALYSIS
         </span>
 
 

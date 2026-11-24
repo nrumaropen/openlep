@@ -9,7 +9,9 @@ function OrganizationTable({
 
     const score = complianceScores.find(
 
-      (item) => item.organization_id === organization.id
+      (item) =>
+
+        Number(item.organization_id) === Number(organization.id)
 
     );
 
@@ -17,7 +19,9 @@ function OrganizationTable({
 
       ...organization,
 
-      score,
+      overallScore: score?.overall_score ?? 0,
+      languageCoverage: score?.language_coverage ?? 0,
+      responseTime: score?.response_time_score ?? 0,
 
     };
 
@@ -25,9 +29,10 @@ function OrganizationTable({
 
   return (
 
-    <section 
+    <section
       id="organizations"
-      className="dashboard-panel">
+      className="dashboard-panel"
+    >
 
       <div className="panel-header">
 
@@ -66,197 +71,102 @@ function OrganizationTable({
 
         <div className="organization-header">
 
-          <span>
-
-            Organization
-
-          </span>
-
-          <span>
-
-            Type
-
-          </span>
-
-          <span>
-
-            Location
-
-          </span>
-
-          <span>
-
-            Compliance
-
-          </span>
-
-          <span>
-
-            Coverage
-
-          </span>
-
-          <span>
-
-            Response
-
-          </span>
-
-          <span>
-
-            Status
-
-          </span>
+          <span>Organization</span>
+          <span>Type</span>
+          <span>Location</span>
+          <span>Compliance</span>
+          <span>Coverage</span>
+          <span>Response</span>
+          <span>Status</span>
 
         </div>
 
-        {
+        {rows.map((organization) => {
 
-          rows.map((organization) => {
+          const status =
 
-            const overall =
+            organization.overallScore >= 90
+              ? "Healthy"
+              : organization.overallScore >= 80
+              ? "Monitor"
+              : "Attention";
 
-              organization.score?.overall_score ?? 0;
+          return (
 
-            const coverage =
+            <article
+              key={organization.id}
+              className="organization-row"
+            >
 
-              organization.score?.language_coverage ?? 0;
+              <div className="organization-name">
 
-            const response =
+                <div className="organization-avatar">
 
-              organization.score?.response_time_score ?? 0;
-
-            const status =
-
-              overall >= 90
-
-                ? "Healthy"
-
-                : overall >= 80
-
-                ? "Monitor"
-
-                : "Attention";
-
-            return (
-
-              <article
-
-                key={organization.id}
-
-                className="organization-row"
-
-              >
-
-                <div className="organization-name">
-
-                  <div className="organization-avatar">
-
-                    {
-
-                      organization.name
-
-                        ?.charAt(0)
-
-                        ?.toUpperCase()
-
-                    }
-
-                  </div>
-
-                  <div>
-
-                    <strong>
-
-                      {organization.name}
-
-                    </strong>
-
-                    <small>
-
-                      {organization.organization_type}
-
-                    </small>
-
-                  </div>
+                  {organization.name?.charAt(0)?.toUpperCase()}
 
                 </div>
 
-                <span>
+                <div>
 
-                  {organization.organization_type}
+                  <strong>
 
-                </span>
+                    {organization.name}
 
-                <span>
+                  </strong>
 
-                  {organization.city},
+                  <small>
 
-                  {" "}
+                    {organization.organization_type}
 
-                  {organization.state}
+                  </small>
 
-                </span>
+                </div>
 
-                <strong className="metric-score">
+              </div>
 
-                  {
+              <span>
 
-                    overall
+                {organization.organization_type}
 
-                      ? `${overall}%`
+              </span>
 
-                      : "--"
+              <span>
 
-                  }
+                {organization.city}, {organization.state}
 
-                </strong>
+              </span>
 
-                <strong className="metric-score">
+              <strong className="metric-score">
 
-                  {
+                {organization.overallScore}%
 
-                    coverage
+              </strong>
 
-                      ? `${coverage}%`
+              <strong className="metric-score">
 
-                      : "--"
+                {organization.languageCoverage}%
 
-                  }
+              </strong>
 
-                </strong>
+              <strong className="metric-score">
 
-                <strong className="metric-score">
+                {organization.responseTime}%
 
-                  {
+              </strong>
 
-                    response
+              <span
+                className={`status-badge ${status.toLowerCase()}`}
+              >
 
-                      ? `${response}%`
+                {status}
 
-                      : "--"
+              </span>
 
-                  }
+            </article>
 
-                </strong>
+          );
 
-                <span
-
-                  className={`status-badge ${status.toLowerCase()}`}
-
-                >
-
-                  {status}
-
-                </span>
-
-              </article>
-
-            );
-
-          })
-
-        }
+        })}
 
       </div>
 
@@ -272,10 +182,7 @@ function OrganizationTable({
 
           <p>
 
-            Organizations continue to maintain strong
-            language-access performance with isolated
-            operational risks requiring additional
-            monitoring.
+            Summary of language-access performance across participating sample institutions.
 
           </p>
 

@@ -45,7 +45,7 @@ function DashboardSidebar() {
     {
       id: "ai",
       icon: "🤖",
-      label: "AI Analysis",
+      label: "Operational Analysis",
     },
 
     {
